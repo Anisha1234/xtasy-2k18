@@ -7,11 +7,11 @@ var createUser = function(req,res){
 
         if( !doc ){
             var newUser = new UserModel(req.body);
-            newUser.save( function(err,doc){
-                if(err) throw err ;
-                console.log(doc)
+            UserModel.saveUser(newUser, function(err, doc) {
+                if(err) throw err;
+                console.log(doc);
                 res.json(doc);
-            })
+            });
         }else{
             console.log("username already taken");
             res.json({ "msg" : "Already registered"});
