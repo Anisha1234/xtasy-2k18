@@ -12,7 +12,7 @@
 
     <meta name="author" content="Muhammad Morshed">
 
-    <title>Meghna | Responsive Multipurpose Parallax HTML5 Template</title>
+    <title>Xtasy-2k18</title>
 
     <!-- Mobile Specific Meta
 		================================================== -->
@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- timer stylesheet -->
+    <link rel="stylesheet" href="css/timer.css">
     <style>
         .navbar {
             margin-bottom: 0;
@@ -95,12 +97,30 @@ Welcome Slider
         </div>
     </nav>
     <section class="hero-area">
-        <div class="block">
-            <img src="images/logo.png">
-            <h1>Xtasy-2k18</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi. At recusandae sit perferendis autem,iste tempora nostrum numquam sapiente!</p>
+        <!-- <div class="block"> -->
+            <div class="col-md-5"><img src="images/logo.png">
+            <h1>Xtasy-2k18</h1></div>
+            <div class="col-md-7" id="clockdiv">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">Days</div>
+                </div>
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">Seconds</div>
+                </div>
+              </div>
+              
 
-        </div>
+        <!-- </div> -->
     </section>
 
     <!--
@@ -567,6 +587,8 @@ Welcome Slider
     <script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
     <!-- Custom js -->
     <script type="text/javascript" src="js/script.js"></script>
+    <!-- timer js -->
+    <script type="text/javascript" src="js/timer.js"></script>
 
 </body>
 
