@@ -12,4 +12,4 @@ router.post("/register" , register.createUser );
 
 router.post("/login" , login.userAuthenticate );
 
-module.exports = router ;
+module.exports = router;
