@@ -4,7 +4,7 @@ var register = require("../controllers/register")
 
 var login = require("../controllers/login")
 
-router.get("/test" , function(req,res){
+router.get("/" , function(req,res){
     res.json({"msg" : "hello world"})
 })
 
