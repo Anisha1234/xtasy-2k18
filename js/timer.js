@@ -38,5 +38,6 @@ function getTimeRemaining(endtime) {
     var timeinterval = setInterval(updateClock, 1000);
   }
   
-  var deadline = new Date(Date.parse("Mar 6, 2018 15:37:25"));
+  var deadline = new Date(Date.parse("Mar 6, 2018 00:00:00"));
+  console.log(deadline);
   initializeClock('clockdiv', deadline);
