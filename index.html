@@ -44,6 +44,15 @@
             margin-bottom: 0;
             border-radius: 0;
         }
+        
+        .modal-dialog {
+            width: 65%;
+            margin: auto;
+        }
+        
+        .modal-body {
+            height: 300px;
+        }
     </style>
     <!--Scary Font source in Events-->
     <script src='http://use.edgefonts.net/eater.js'></script>
@@ -101,27 +110,28 @@ Welcome Slider
     </nav>
     <section class="hero-area">
         <!-- <div class="block">  -->
-            <div class="col-md-6" style="margin-left:10%"><img src="images/logo.png">
-            <h1 style="margin-left:15%">Xtasy-2k18</h1></div>
-            <div class="col-md-8"style="margin-right:8.5%"  id="clockdiv">
-                <div>
-                  <span class="days"></span>
-                  <div class="smalltext">Days</div>
-                </div>
-                <div>
-                  <span class="hours"></span>
-                  <div class="smalltext">Hours</div>
-                </div>
-                <div>
-                  <span class="minutes"></span>
-                  <div class="smalltext">Minutes</div>
-                </div>
-                <div>
-                  <span class="seconds"></span>
-                  <div class="smalltext">Seconds</div>
-                </div>
-              </div>
-              
+        <div class="col-md-6" style="margin-left:10%"><img src="images/logo.png">
+            <h1 style="margin-left:15%">Xtasy-2k18</h1>
+        </div>
+        <div class="col-md-8" style="margin-right:8.5%" id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Days</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Hours</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Seconds</div>
+            </div>
+        </div>
+
 
         <!-- </div> -->
     </section>
@@ -186,61 +196,81 @@ Welcome Slider
 
                 <!-- section title -->
                 <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
-                    <h2>Star <span class="color">Nights</span> </h2>
+                    <h2><span class="color">Star Nights</span> </h2>
                     <div class="border"></div>
                 </div>
                 <!-- /section title -->
-
-                <!-- About item -->
+                <div class="col-md-1"></div>
+                <!-- 1st star event -->
                 <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
-                    <a href=events.html #extra>
+                    <a id="myBtn1" style="cursor:pointer;">
                         <div class="block">
                             <div class="icon-box">
                                 <i class="tf-tools"></i>
                             </div>
-                        <!-- Express About Yourself -->
+                            <!-- Express About Yourself -->
                             <div class="content text-center">
-                                <h3 class="ddd">We're Creative</h3>                            
+                                <h3 class="ddd">We're Creative</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
                             </div>
                         </div>
-                    </a>    
-                </div>
-                <!-- End About item -->
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
 
-                <!-- About item -->
-                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
-                    <a href=events.html #extra>
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4>Star Night 1</h4>
+                                </div>
+                                <div class="modal-body" style="padding:40px 50px;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End 1st star night -->
+
+                <div class="col-md-2"></div>
+
+                <!-- 2nd star event -->
+                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+                    <a id="myBtn2" style="cursor:pointer;">
                         <div class="block">
                             <div class="icon-box">
-                                <i class="tf-strategy"></i>
+                                <i class="tf-tools"></i>
                             </div>
-                        <!-- Express About Yourself -->
+                            <!-- Express About Yourself -->
                             <div class="content text-center">
-                                <h3>We're Professional</h3>
+                                <h3 class="ddd">We're Creative</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
                             </div>
                         </div>
                     </a>
-                </div>
-                <!-- End About item -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal2" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
 
-                <!-- About item -->
-                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
-                    <a href=events.html #extra>
-                        <div class="block kill-margin-bottom">
-                            <div class="icon-box">
-                                <i class="tf-anchor2"></i>
-                            </div>
-                        <!-- Express About Yourself -->
-                            <div class="content text-center">
-                                <h3>We're Genius</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4>Star Night 2</h4>
+                                </div>
+                                <div class="modal-body" style="padding:40px 50px;">
+
+                                </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <!-- End About item -->
+                <!-- End 2nd star night -->
+
+                <div class="col-md-1"></div>
+
 
             </div>
             <!-- End row -->
@@ -263,51 +293,56 @@ Welcome Slider
                 <!-- /section title -->
 
                 <!-- Event container -->
-                
-                    
-                    <div class="event-container">
-                          <div class="event-list">
-                            <div class="overlay-container">
+
+
+                <div class="event-container">
+                    <div class="event-list">
+                        <div class="overlay-container">
                             <a href=events.html>
-                                <img class="event-image e-img" src="images/events/technical.jpg"><div class="text-centered">Tech Events</div>
+                                <img class="event-image e-img" src="images/events/technical.jpg">
+                                <div class="text-centered">Tech Events</div>
                             </a>
-                            </div>
-                          </div>
-                          <div class="event-list">
-                            <div class="overlay-container">
+                        </div>
+                    </div>
+                    <div class="event-list">
+                        <div class="overlay-container">
                             <a href=events.html>
-                                <img class="event-image e-img" src="images/events/fun.jpg"><div class="text-centered">FUN Events</div>
+                                <img class="event-image e-img" src="images/events/fun.jpg">
+                                <div class="text-centered">FUN Events</div>
                             </a>
-                            </div>
-                          </div>
-                    
-                    
-                          <div class="event-list">
-                            <div class="overlay-container">
+                        </div>
+                    </div>
+
+
+                    <div class="event-list">
+                        <div class="overlay-container">
                             <a href=events.html>
-                                <img class="event-image e-img" src="images/events/cultural.jpg"><div class="text-centered">Cultural Events</div>
+                                <img class="event-image e-img" src="images/events/cultural.jpg">
+                                <div class="text-centered">Cultural Events</div>
                             </a>
-                            </div>
-                          </div>
-                          <div class="event-list">
-                            <div class="overlay-container">
+                        </div>
+                    </div>
+                    <div class="event-list">
+                        <div class="overlay-container">
                             <a href=events.html>
-                                <img class="event-image e-img" src="images/events/literary.jpg"><div class="text-centered">literary Events</div>
+                                <img class="event-image e-img" src="images/events/literary.jpg">
+                                <div class="text-centered">literary Events</div>
                             </a>
-                            </div>
-                          </div> 
-                          <div class="event-list">
-                            <div class="overlay-container">
+                        </div>
+                    </div>
+                    <div class="event-list">
+                        <div class="overlay-container">
                             <a href=events.html>
-                                <img class="event-image e-img" src="images/events/all.jpg"><div class="text-centered">All Events</div>
+                                <img class="event-image e-img" src="images/events/all.jpg">
+                                <div class="text-centered">All Events</div>
                             </a>
-                            </div>
-                           </div>  
-                    </div>     
-                
+                        </div>
+                    </div>
+                </div>
+
                 <!-- End Event container -->
 
-                
+
 
             </div>
             <!-- End row -->
@@ -321,68 +356,68 @@ Welcome Slider
         Gallery
         ============-->
     <section id="counter" class="parallax-section bg-1 section overly">
-       <!-- section title -->
-       <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+        <!-- section title -->
+        <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
             <h2> <span class="color">Gallery</span> </h2>
             <div class="border"></div>
         </div>
         <!-- /section title -->
 
         <div class="container">
-            
+
             <!-- single blog post -->
 
-                <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <div class="post-block">
-                            <div id="gallery-post" class="media-wrapper">
-                                <div class="item">
-                                    <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
-                                </div>
-                                <div class="item">
-                                    <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
-                                </div>
-                                <div class="item">
-                                    <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
-                                </div>
-                            </div>
-
-                            
+            <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                <div class="post-block">
+                    <div id="gallery-post" class="media-wrapper">
+                        <div class="item">
+                            <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
-                    </article>
-                    <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <div class="post-block">
-                            <div id="gallery-post" class="media-wrapper">
-                                <div class="item">
-                                    <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
-                                </div>
-                                <div class="item">
-                                    <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
-                                </div>
-                                <div class="item">
-                                    <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
-                                </div>
-                            </div>
-
-                            
+                        <div class="item">
+                            <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
                         </div>
-                    </article>
-                    <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <div class="post-block">
-                            <div id="gallery-post" class="media-wrapper">
-                                <div class="item">
-                                    <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
-                                </div>
-                                <div class="item">
-                                    <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
-                                </div>
-                                <div class="item">
-                                    <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
-                                </div>
-                            </div>
-
-                            
+                        <div class="item">
+                            <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
                         </div>
-                    </article>
+                    </div>
+
+
+                </div>
+            </article>
+            <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                <div class="post-block">
+                    <div id="gallery-post" class="media-wrapper">
+                        <div class="item">
+                            <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+            <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                <div class="post-block">
+                    <div id="gallery-post" class="media-wrapper">
+                        <div class="item">
+                            <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
 
 
         </div>
@@ -395,7 +430,7 @@ Welcome Slider
 
 
 
-      <!-- Srart Contact Us
+    <!-- Srart Contact Us
 =========================================== -->
     <section id="contact-us" class="contact-us section-bg">
         <div class="container">
@@ -588,6 +623,8 @@ Welcome Slider
     <script type="text/javascript" src="js/script.js"></script>
     <!-- timer js -->
     <script type="text/javascript" src="js/timer.js"></script>
+
+    <script type="text/javascript" src="js/events.js"></script>
 
 </body>
 
