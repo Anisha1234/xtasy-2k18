@@ -25,7 +25,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -95,26 +94,16 @@ a:hover {
     padding: 0 !important;
 }
 
-.btn {
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 0;
-    transition: all .3s ease-in 0s;
-}
-
-.btn:focus {
-    color: #ddd;
-}
-
-.btn-transparent {
-    border: 1px solid #4e595f;
+.btn-default {
+    background-color: white;
+    color: #fc1606;
+    transition: all .4s ease-in 0s;
+    padding: 2px 8px;
 }
 
 .btn-transparent:hover,
 .btn-transparent:focus {
     background-color: #fc1606;
-    border: 1px solid transparent;
     color: #fff;
 }
 
@@ -1059,8 +1048,14 @@ a:hover {
     color: #fc1606;
 }
 
-.portfolio-items-wrapper .mix {
+.portfolio-items-wrapper {
     padding: 5px;
+}
+
+.mix {
+    text-align: center;
+    padding: 5px;
+    height: 250px;
 }
 
 .portfolio-block {

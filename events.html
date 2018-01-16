@@ -5,8 +5,9 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
+
 <head>
-    
+
     <!-- CSS
 		================================================== -->
     <!-- Fontawesome Icon font -->
@@ -22,166 +23,314 @@
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events.css">
     <style>
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
+
     </style>
 
 </head>
 
 <body>
+    <!-- Page title -->
+    <div class="title text-center">
+        <h2><span class="color">Events</span></h2>
+        <div class="border"></div>
+    </div>
 
-<!-- Start Event page
-		=========================================== -->
+    <!-- Filters -->
+    <div class="portfolio-filter">
+        <button type="button" data-filter="all">All</button>
+        <button type="button" data-filter=".technical">Technical</button>
+        <button type="button" data-filter=".cultural">Cultural</button>
+        <button type="button" data-filter=".literary">Literary</button>
+        <button type="button" data-filter=".fun">Fun</button>
+        <button type="button" data-filter=".extravaganza">Cultural Extravaganza</button>
+    </div>
 
-        <section class="portfolio section" id="portfolio">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-lg-12">
-    
-                        <!-- section title -->
-                        <div class="title text-center">
-                            <h2>Our <span class="color">Event Page</span></h2>
-                            <div class="border"></div>
-                        </div>
-                        <!-- /section title -->
-                    </div>
-                    <!-- /end col-lg-12 -->
+
+
+    <div class="row portfolio-items-wrapper">
+
+        <!-- Event-1-->
+        <div class="mix col-md-4 cultural fun container">
+            <img src="images/events/event1.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 1</h2>
+                    <button type="button" class="btn btn-default" id="myBtn1"><span class="glyphicon glyphicon-plus"></span></button>
                 </div>
-                <!-- end row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="portfolio-filter">
-                            <button type="button" data-filter="all">All</button>
-                            <button type="button" data-filter=".photography">Photography</button>
-                            <button type="button" data-filter=".design">Design</button>
-                            <button type="button" data-filter=".development">Development</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row portfolio-items-wrapper">
-                    <div class="mix col-md-4 design">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="../images/portfolio/portfolio-1.jpg" alt="">
-                            <div class="caption">
-    
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Tag Design</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 design">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-2.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-2.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Sound system</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 design development">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-3.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-3.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Clock Product</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 photography development">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-4.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-4.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Bottol Label</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 design">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-5.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-5.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Shopping Bag</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 photography">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-6.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-6.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Tag Design</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 design">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-7.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-7.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Business Card</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4 design">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-8.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-8.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Stationary Design</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix col-md-4  photography development">
-                        <div class="portfolio-block">
-                            <img class="img-responsive" src="images/portfolio/portfolio-1.jpg" alt="">
-                            <div class="caption">
-                                <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
-                                    <i class="tf-ion-android-search"></i>
-                                </a>
-                                <h4><a href="">Tag Design</a></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
-    
-    
-    
             </div>
-            <!-- end container -->
-        </section>
-        <!-- End section -->
-    
-         <!-- 
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog  modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>Event 1</h4>
+                        </div>
+                        <div class="modal-body" style="padding:20px 30px;">
+                            <p>@SubodhNijsure Sorry for the late response. You can't set the height in % because that will mean a % of its parent, in this case the parent is .modal-content and its height depends on its children. That's why it won't work
+                                unless you set one of them heights. Either you set .modal-content height or set .modal-body height. If you set .modal-content height then you will be able to set the height of .modal-body in % and it will be a % of its
+                                parent so you if you set it less than 100% there will be blank space at the bottom, since you are not filling all .modal-content 's height.</p>
+                            <p>@SubodhNijsure Sorry for the late response. You can't set the height in % because that will mean a % of its parent, in this case the parent is .modal-content and its height depends on its children. That's why it won't work
+                                unless you set one of them heights. Either you set .modal-content height or set .modal-body height. If you set .modal-content height then you will be able to set the height of .modal-body in % and it will be a % of its
+                                parent so you if you set it less than 100% there will be blank space at the bottom, since you are not filling all .modal-content 's height.</p>
+                            <p>@SubodhNijsure Sorry for the late response. You can't set the height in % because that will mean a % of its parent, in this case the parent is .modal-content and its height depends on its children. That's why it won't work
+                                unless you set one of them heights. Either you set .modal-content height or set .modal-body height. If you set .modal-content height then you will be able to set the height of .modal-body in % and it will be a % of its
+                                parent so you if you set it less than 100% there will be blank space at the bottom, since you are not filling all .modal-content 's height.</p>
+
+                            <p>@SubodhNijsure Sorry for the late response. You can't set the height in % because that will mean a % of its parent, in this case the parent is .modal-content and its height depends on its children. That's why it won't work
+                                unless you set one of them heights. Either you set .modal-content height or set .modal-body height. If you set .modal-content height then you will be able to set the height of .modal-body in % and it will be a % of its
+                                parent so you if you set it less than 100% there will be blank space at the bottom, since you are not filling all .modal-content 's height.</p>
+                            <p>@SubodhNijsure Sorry for the late response. You can't set the height in % because that will mean a % of its parent, in this case the parent is .modal-content and its height depends on its children. That's why it won't work
+                                unless you set one of them heights. Either you set .modal-content height or set .modal-body height. If you set .modal-content height then you will be able to set the height of .modal-body in % and it will be a % of its
+                                parent so you if you set it less than 100% there will be blank space at the bottom, since you are not filling all .modal-content 's height.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-2-->
+        <div class="mix col-md-4 literary container">
+            <img src="images/events/event2.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 2</h2>
+                    <button type="button" class="btn btn-default" id="myBtn2"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>Event2</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-3-->
+        <div class="mix col-md-4 technical fun container">
+            <img src="images/events/event3.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 3</h2>
+                    <button type="button" class="btn btn-default" id="myBtn3"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login3</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-4-->
+        <div class="mix col-md-4 extravaganza container">
+            <img src="images/events/event4.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 4</h2>
+                    <button type="button" class="btn btn-default" id="myBtn4"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal4" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login4</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-5-->
+        <div class="mix col-md-4 technical literary container">
+            <img src="images/events/event5.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 5</h2>
+                    <button type="button" class="btn btn-default" id="myBtn5"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal5" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login5</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-6-->
+        <div class="mix col-md-4 cultural extravaganza container">
+            <img src="images/events/event6.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 6</h2>
+                    <button type="button" class="btn btn-default" id="myBtn6"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal6" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login6</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-7-->
+        <div class="mix col-md-4 technical container">
+            <img src="images/events/event7.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 7</h2>
+                    <button type="button" class="btn btn-default" id="myBtn7"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal7" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login 7</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-8-->
+        <div class="mix col-md-4 fun literary container">
+            <img src="images/events/event8.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 8</h2>
+                    <button type="button" class="btn btn-default" id="myBtn8"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal8" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login 8</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Event-9-->
+        <div class="mix col-md-4 cultural container">
+            <img src="images/events/event9.jpg" class="image">
+            <div class="overlay">
+                <div class="text">
+                    <h2>Event 9</h2>
+                    <button type="button" class="btn btn-default" id="myBtn9"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal9" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Login9</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- 
 		Essential Scripts
 		=====================================-->
 
@@ -207,5 +356,6 @@
     <script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
     <!-- Custom js -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
 
 </body>
