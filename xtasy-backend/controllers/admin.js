@@ -9,7 +9,7 @@ var displayAll = function(req,res) {
   query.exec(function(err, user) {
     if(err) throw err;
     console.log(user);
-    res.render("pages/admin" , {"users" : user[0].name.toString()})
+    res.render("pages/admin" , {"users" : user})
   })
 
 }
