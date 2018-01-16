@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 var UserModel = require('../models/user');
 
 var userAuthenticate = function(req,res) {
-    UserModel.findOne({"username" : req.body.username} , function(err,doc) {
+    UserModel.findOne({"emailid" : req.body.emailid} , function(err,doc) {
       console.log(doc);
       if(err) throw err;
       if(doc){
@@ -12,7 +12,7 @@ var userAuthenticate = function(req,res) {
           if(isMatch){
             var details = {
               "name" : doc.name,
-              "username" : doc.username,
+              "emailid" : doc.emailid,
               "college" : doc.college
             };
             res.json(details);
@@ -21,7 +21,7 @@ var userAuthenticate = function(req,res) {
           }
         });
       } else {
-        res.json({msg:"Incorrect Username"});
+        res.json({msg:"Incorrect emailid"});
       }
     });
   };

@@ -4,7 +4,7 @@ const UserModel = require('../models/user');
 
 var displayAll = function(req,res) {
   var query = UserModel.find();
-  query.select('name username college');
+  query.select('name emailid college');
 
   query.exec(function(err, user) {
     if(err) throw err;

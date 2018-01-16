@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var UserModel = require('../models/user');
 
 var createUser = function(req,res){
-    UserModel.findOne({"username" : req.body.username} , function(err,doc){
+  console.log(req.body)
+    UserModel.findOne({"emailid" : req.body.emailid} , function(err,doc){
 
         if( !doc ){
             var newUser = new UserModel(req.body);
@@ -13,7 +14,7 @@ var createUser = function(req,res){
                 res.json(doc);
             });
         }else{
-            console.log("username already taken");
+            console.log("emailid already taken");
             res.json({ "msg" : "Already registered"});
         }
     })
