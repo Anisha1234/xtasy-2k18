@@ -5,6 +5,20 @@
    </head>
    <body>
     <h1>Admin</h1>
-    <%= users %>
+    <table>
+      <tr>
+        <th>NAME</th>
+        <th>USERNAME</th>
+        <th>COLLEGE</th>
+      </tr>
+      <% for(var i=0; i < users.length; i++) { %>
+      <tr>
+       <td><%= users[i].name %></td>
+       <td><%= users[i].username %></td>
+       <td><%= users[i].college %></td>
+      </tr>
+      <% } %>
+    </table>
+    
   </body>
  </html>
