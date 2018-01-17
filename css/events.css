@@ -73,6 +73,7 @@ h4,
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    font-weight: bolder;
 }
 
 .portfolio-items-wrapper {
@@ -80,17 +81,24 @@ h4,
 }
 
 @media screen and (max-device-width: 500px) {
-    .portfolio-items-wrapper {
-        margin: 30px;
-    }
-    .col-md-4 {
-        height: 400px;
-    }
-    .modal-dialog {
-        position: absolute;
-        transform: translate(-50%, -50%) !important;
-        overflow-y: initial !important;
-        width: 100%;
-        margin: auto;
+    @media screen and (max-device-width: 500px) {
+        .portfolio-items-wrapper {
+            margin: 30px;
+        }
+        .col-md-4 {
+            height: 400px;
+        }
+        .modal-dialog {
+            overflow-y: initial !important;
+            width: 100%;
+        }
+        .modal-body {
+            height: 700px;
+            overflow-y: auto;
+            font-size: 50px;
+        }
+        .portfolio-filter>button {
+            font-size: 50px;
+        }
     }
 }
