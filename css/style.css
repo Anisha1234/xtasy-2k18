@@ -267,14 +267,14 @@ a:hover {
     background: #fc1606;
     color: #fff;
     display: inline-block;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1px;
-    padding: 10px 35px;
+    padding: 15px 40px;
     text-transform: uppercase;
 }
 
 .btn-main:hover {
-    background: #2c9091;
+    background: #fc1606;
     color: #fff;
 }
 
@@ -607,7 +607,8 @@ a:hover {
 }
 
 .hero-area {
-    background-image: url("../images/slider/hero-area.jpg");
+    background-image: url("../images/backgrounds/villians1.jpg");
+    opacity: 0.1%;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -1424,7 +1425,6 @@ a:hover {
 }
 
 .post-block {
-    background-color: #292F36;
     margin-bottom: 10px;
 }
 
