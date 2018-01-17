@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#loginform").submit(function () {
         var loginForm = {
-            username: $("#username").val(),
+            emailid: $("#emailid").val(),
             password: $("#password").val()
         };
         console.log(loginForm)
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         var userData = {
             "name": $("#name").val(),
-            "username": $("#username2").val(),
+            "emailid": $("#emailid2").val(),
             "password": $("#password2").val(),
             "college": $("#college").val()
         }
@@ -34,4 +34,3 @@ $(document).ready(function () {
 
     });
 });
-

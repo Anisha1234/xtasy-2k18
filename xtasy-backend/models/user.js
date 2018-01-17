@@ -5,10 +5,10 @@ var Schema = mongoose.Schema;
 var userSchema = new Schema({
 
     name : { type : String },
-    username : { type : String },
+    emailid : { type : String },
     password : { type : String },
     college : { type : String },
-    active: { type: Boolean, default: false } 
+    active: { type: Boolean, default: false }
 
 });
 
@@ -21,8 +21,7 @@ module.exports.saveUser = function(newUser, callback) {
         bcrypt.hash(newUser.password, salt, function(err, hash) {
             // Store hash in your password DB.
             newUser.password = hash;
-            newUser.save(callback);  
+            newUser.save(callback);
         });
-    }); 
+    });
 };
-
