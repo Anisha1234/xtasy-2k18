@@ -1,3 +1,5 @@
+
+@import url("https://fonts.googleapis.com/css?family=Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:300, 400, 600, 700") ; 
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9,11 +11,11 @@ html {
   box-sizing: inherit; }
 
 body, html, p, h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica", serif;
+  font-family: "Sedgwick Ave Display", sans-serif;
   font-weight: normal; }
 
 code {
-  font-family: "Consolas", "Monaco", monospace;
+  font-family: "Sedgwick Ave Display", sans-serif;
   font-weight: normal; }
 
 body, html, p, code {
@@ -28,8 +30,9 @@ pre {
   padding: 10px; }
 
 .content {
-  width: 980px;
-  margin: 80px auto; }
+  width: 150px;
+  margin: auto;
+  text-align: center; }
 
 .formats .format {
   display: inline-block; }
