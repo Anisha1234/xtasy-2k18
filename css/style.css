@@ -12,14 +12,15 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
-html {
+@import url("https://fonts.googleapis.com/css?family=Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700") ;                                          
+    html {
     background-color: #353b43;
     color: #737f8a;
 }
 
 body {
     background-color: #353b43;
-    font-family: "Anaheim", sans-serif;
+    font-family: "Sedgwick Ave Display", sans-serif;
     color: #737f8a;
     -webkit-font-smoothing: antialiased;
 }
@@ -30,12 +31,12 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    font-family: "Quattrocento Sans", sans-serif;
+    font-family: "Sedgwick Ave Display", sans-serif;
     color: #afbac4;
 }
 
 p {
-    font-family: "Quattrocento Sans", sans-serif;
+    font-family: "Sedgwick Ave Display", sans-serif;
 }
 
 
@@ -573,7 +574,7 @@ a:hover {
 }
 
 .navigation .navigation-menu li a {
-    font-size: 16px;
+    font-size: 20px;
     color: #737f8a;
 }
 
@@ -2267,3 +2268,8 @@ blockquote {
       -1px 1px 0 #000,
        1px 1px 0 #000;
 }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fc1606;
+    background-color: #080808;
+    font-size: 30px;
+    text-shadow: white 1px 2px 3px;
