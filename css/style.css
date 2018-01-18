@@ -23,6 +23,7 @@ body {
     font-family: "Sedgwick Ave Display", sans-serif;
     color: #737f8a;
     -webkit-font-smoothing: antialiased;
+    font-size: 2.5em;
 }
 
 h1,
@@ -84,7 +85,7 @@ a:hover {
 
 a:focus,
 a:hover {
-    color: #6CB670;
+    color: #fc1606;
 }
 
 .kill-margin-bottom {
@@ -2276,7 +2277,7 @@ blockquote {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-family: eater;
     -webkit-text-stroke-width: 1.4px;
    -webkit-text-stroke-color: black; 
@@ -2287,7 +2288,7 @@ blockquote {
     1px 1px 0 #000;
 }
 .text-centered:hover{
-    font-size: 3em;
+    font-size: 2em;
     transition: 2s;
     -webkit-text-stroke: 1px black;
    color: white;
@@ -2298,8 +2299,26 @@ blockquote {
       -1px 1px 0 #000,
        1px 1px 0 #000;
 }
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fc1606;
     background-color: #080808;
     font-size: 30px;
     text-shadow: white 1px 2px 3px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #fc1606;
+    background-color: transparent;
+}
+
+.nav-text{
+    font-size: 22px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}        
+ navbar-inverse .navbar-brand {
+    color: #fff;
+}       
+        
+}
+
