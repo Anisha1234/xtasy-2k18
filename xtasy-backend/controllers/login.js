@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 var UserModel = require('../models/user');
 
 var userAuthenticate = function(req,res) {
