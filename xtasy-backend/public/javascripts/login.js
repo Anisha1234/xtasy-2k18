@@ -1,17 +1,40 @@
 $(document).ready(function () {
-    $("#loginform").submit(function () {
+
+    $("#loginform").submit( function () {
+        
         var loginForm = {
             emailid: $("#emailid").val(),
             password: $("#password").val()
         };
-        console.log(loginForm)
-        $.post('api/login', loginForm, function (data, status) {
+
+        console.log(loginForm);
+
+        $.post('api/login', loginForm, function (data, status) 
+        {
+            
             console.log(data);
             if (data.msg) {
-                alert(data.msg);
+                
+                if (data.msg == "admin") {
+                    
+                    location.href = "/admin";
+                
+                } else {
+                    
+                    if (data.msg == "successful") {
+                        location.href = "/dashboard";
+                    } else {
+                        alert(data.msg);
+                    }
+                
+                }
+            
             }
+        
         });
+
         return false;
+
     });
 
     $("#regform").submit(function (event) {
@@ -33,4 +56,5 @@ $(document).ready(function () {
         return false;
 
     });
+
 });

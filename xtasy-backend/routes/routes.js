@@ -13,4 +13,12 @@ router.get("/login" , function(req,res ,next){
 
 router.get("/admin" , admin.displayAll);
 
+router.get("/dashboard", function(req, res) {
+  if(req.session.user && req.session.user !== "admin") {
+    res.render('./pages/dashboard');
+  } else {
+    res.send("Invalid session!");
+  }
+});
+
 module.exports = router;
