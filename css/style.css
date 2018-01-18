@@ -608,7 +608,7 @@ a:hover {
 
 .hero-area {
     background-image: url("../images/backgrounds/villians1.jpg");
-    opacity: 0.1%;
+    /* opacity: 0.1%; */
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -721,6 +721,37 @@ a:hover {
     margin-top: 20px;
 }
 
+.main-block{
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 30px;  
+}
+
+.main-container{
+    padding: .5vw;
+    display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: wrap; 
+  flex-wrap: wrap; 
+  display: -webkit-box;
+  display: flex;
+  z-index:3;  
+}
+
+@media (max-width:400px){
+    .main-conatiner{
+        padding: .5vw;
+        display: -ms-flexbox;
+      -ms-flex-wrap: wrap;
+      -ms-flex-direction: row;
+      -webkit-flex-flow: wrap; 
+      flex-wrap: wrap; 
+      display: -webkit-box;
+      display: flex;
+    }
+}
 .dark-bg {
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
@@ -2205,7 +2236,6 @@ blockquote {
 
     display: flex;
  }
-}
 
 .e-img{
     display: block;
