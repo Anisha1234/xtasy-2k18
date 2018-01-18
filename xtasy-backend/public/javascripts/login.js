@@ -37,13 +37,28 @@ $(document).ready(function () {
 
     });
 
-    $("#regform").submit(function (event) {
+
+    $('#regform').submit(function() {
+        $(this).ajaxSubmit({
+          error: function(xhr) {
+            alert('Error: ' + xhr.status);
+          },
+         success: function(response) {
+          console.log(response);
+         }
+        });
+        //Very important line, it disable the page refresh.
+        return false;
+      });
+
+    /*$("#regform").submit(function (event) {
 
         var userData = {
             "name": $("#name").val(),
             "emailid": $("#emailid2").val(),
             "password": $("#password2").val(),
-            "college": $("#college").val()
+            "college": $("#college").val(),
+
         }
 
         console.log(userData);
@@ -55,6 +70,6 @@ $(document).ready(function () {
 
         return false;
 
-    });
+    });*/
 
 });
