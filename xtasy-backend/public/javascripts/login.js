@@ -1,5 +1,16 @@
 $(document).ready(function () {
 
+    if(window.location.search){
+        var urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams.has('action'));
+        if(urlParams.has('action')){
+            if(urlParams.get('action') === "1") alert("You have been successfully verified");
+            if(urlParams.get('action') === "2") alert("You have not registered");
+            if(urlParams.get('action') === "3") alert("You couldn't be verified");
+            if(urlParams.get('action') === "4") alert("Session expired! You need to login");
+        }
+    }
+
     $("#loginform").submit( function () {
         
         var loginForm = {
@@ -45,31 +56,12 @@ $(document).ready(function () {
           },
          success: function(response) {
           console.log(response);
+          alert(response.responseDesc || response.msg);
+          location.reload();
          }
         });
         //Very important line, it disable the page refresh.
         return false;
       });
-
-    /*$("#regform").submit(function (event) {
-
-        var userData = {
-            "name": $("#name").val(),
-            "emailid": $("#emailid2").val(),
-            "password": $("#password2").val(),
-            "college": $("#college").val(),
-
-        }
-
-        console.log(userData);
-
-        $.post("api/register", userData, function (data, status) {
-            console.log("data stored");
-            console.log(data)
-        })
-
-        return false;
-
-    });*/
 
 });

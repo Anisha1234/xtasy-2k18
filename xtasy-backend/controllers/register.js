@@ -50,9 +50,9 @@ var createUser = function(req,res){
                     bcrypt.hash(newUser.emailid, salt, function(err, hash) {
                         // Store hash in your password DB.
                           var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid +'&code=' + hash;
-                          var mail = {  // to be set with appropriate req.body attributes
-                          from:  "xtasy <3" + ' <ramakpatt@gmail.com>'  , // "<" + req.body.organizer + ">" ,   //'ramakpatt@gmail.com',
-                          to: newUser.emailid,  // should be set to req.body.to
+                          var mail = { 
+                          from:  "xtasy <3" + ' <ramakpatt@gmail.com>'  ,
+                          to: newUser.emailid, 
                           subject: "Verification mail" ,
                           html: "<p>" + "Click on the below link to verify "+ link + "</p>"
                       }
@@ -60,14 +60,16 @@ var createUser = function(req,res){
                      transport.sendMail(mail, (error, response) => {
                           transport.close()
                           if (error) {
-                              console.log({ response: 'Error' });
+                              console.log(error);
+                              res.json({ "msg": 'Error in sending mail!' });
                           } else {
-                              console.log({ response: 'Sent' });
+                              console.log("Mail has been sent")
+                              res.json({ "msg": 'A mail has been sent to you for verification' });
                           }
                       })
                     });
                 });// nodemailer codes
-                res.json(doc);
+               // res.json(doc);
             });
         }else{
             console.log("emailid already taken");

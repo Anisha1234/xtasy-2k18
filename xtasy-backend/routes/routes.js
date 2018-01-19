@@ -17,7 +17,7 @@ router.get("/dashboard", function(req, res) {
   if(req.session.user && req.session.user !== "admin") {
     res.render('./pages/dashboard' , { "details" : req.session.user });
   } else {
-    res.send("Invalid session!");
+    res.redirect("/login?action=4");
   }
 });
 

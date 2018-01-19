@@ -9,12 +9,12 @@ var verifyMail = function(req,res) {
       if(isMatch) {
         UserModel.findOneAndUpdate({emailid : req.query.email} , {$set : {isVerified : true}}, function(err,doc) {
           if(err) throw err;
-          if(!doc) res.send("invalid mail");
-          else res.json(doc);
+          if(!doc) res.redirect("/login?action=2") // res.send("invalid mail");
+          else res.redirect("/login?action=1")
         } );
 
       }
-      else res.send("Invalid");
+      else res.redirect("/login?action=3");
     });
   }
 

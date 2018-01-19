@@ -3,9 +3,9 @@ const UserModel = require('../models/user');
 
 
 var displayAll = function(req,res) {
-  if (req.session.user) {
+  if (req.session.user && req.session.user == "admin") {
     var query = UserModel.find();
-    query.select('name emailid college');
+    query.select('name emailid college xtasyid');
   
     query.exec(function(err, user) {
       if(err) throw err;
@@ -13,7 +13,7 @@ var displayAll = function(req,res) {
       res.render("pages/admin" , {"users" : user})
     });
   } else {
-    res.send("Invalid Session!");
+    res.redirect("/login?action=4");
   }
 
 }
