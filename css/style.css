@@ -12,7 +12,8 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700") ;                                          
+@import url("https://fonts.googleapis.com/css?family=Almendra|Bubblegum+Sans|Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700") ; 
+                                         
     html {
     background-color: #353b43;
     color: #737f8a;
@@ -37,7 +38,7 @@ h6 {
 }
 
 p {
-    font-family: "Sedgwick Ave Display", sans-serif;
+    font-family: "Bubblegum Sans", sans-serif;
 }
 
 
