@@ -22,14 +22,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
   path: '/',
-  secret: 'very secret'
+  secret: 'very secret',
+  saveUninitialized: false,
+  resave:false
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/api', api);
 
-mongoose.connect('mongodb://localhost:27017/xtasy');
+mongoose.connect('mongodb://localhost:27017/xtasy',{
+  useMongoClient: true
+});
 var db = mongoose.connection;
 db.once('open', function () {
   console.log("Connection to MongoDB succesful...");

@@ -1,5 +1,19 @@
 var mongoose = require('mongoose');
 var request = require('request');
+var mailer = require("nodemailer");
+var smtpTransport = require('nodemailer-smtp-transport');
+var bcrypt = require('bcrypt');
+
+var options = {
+    service: 'gmail',
+    secure: true,
+    auth: {
+        user: 'ramakpatt@gmail.com',
+        pass: 'edtgh67ifr'
+    }
+};
+
+var transport = mailer.createTransport(smtpTransport(options));
 
 var UserModel = require('../models/user');
 
@@ -28,9 +42,31 @@ var createUser = function(req,res){
 
         if( !doc ){
             var newUser = new UserModel(req.body);
+            //newUser.xtasyid
             UserModel.saveUser(newUser, function(err, doc) {
                 if(err) throw err;
                 console.log(doc);
+                bcrypt.genSalt(10, function(err, salt) {
+                    bcrypt.hash(newUser.emailid, salt, function(err, hash) {
+                        // Store hash in your password DB.
+                          var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid +'&code=' + hash;
+                          var mail = {  // to be set with appropriate req.body attributes
+                          from:  "xtasy <3" + ' <ramakpatt@gmail.com>'  , // "<" + req.body.organizer + ">" ,   //'ramakpatt@gmail.com',
+                          to: newUser.emailid,  // should be set to req.body.to
+                          subject: "Verification mail" ,
+                          html: "<p>" + "Click on the below link to verify "+ link + "</p>"
+                      }
+
+                     transport.sendMail(mail, (error, response) => {
+                          transport.close()
+                          if (error) {
+                              console.log({ response: 'Error' });
+                          } else {
+                              console.log({ response: 'Sent' });
+                          }
+                      })
+                    });
+                });// nodemailer codes
                 res.json(doc);
             });
         }else{

@@ -9,8 +9,8 @@ var userAuthenticate = function(req,res) {
       res.json({ msg: "admin" });
     } else {
 
-    
-    UserModel.findOne({"emailid" : req.body.emailid} , function(err,doc) {
+
+    UserModel.findOne({"emailid" : req.body.emailid,"isVerified":true} , function(err,doc) {
       console.log(doc);
       if(err) throw err;
       if(doc){
@@ -20,7 +20,8 @@ var userAuthenticate = function(req,res) {
             var details = {
               "name" : doc.name,
               "emailid" : doc.emailid,
-              "college" : doc.college
+              "college" : doc.college,
+              "xtasyid" : "xtasy#" + doc.xtasyid
             };
             req.session.user = details;
             res.json({"msg": "successful"});
@@ -29,7 +30,7 @@ var userAuthenticate = function(req,res) {
           }
         });
       } else {
-        res.json({msg:"Incorrect emailid"});
+        res.json({msg:"Either unverified or unregistered"});
       }
     });
   }
