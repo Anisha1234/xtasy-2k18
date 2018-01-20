@@ -50,9 +50,9 @@ var createUser = function(req,res){
                     bcrypt.hash(newUser.emailid, salt, function(err, hash) {
                         // Store hash in your password DB.
                           var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid +'&code=' + hash;
-                          var mail = { 
+                          var mail = {
                           from:  "xtasy <3" + ' <ramakpatt@gmail.com>'  ,
-                          to: newUser.emailid, 
+                          to: newUser.emailid,
                           subject: "Verification mail" ,
                           html: "<p>" + "Click on the below link to verify "+ link + "</p>"
                       }

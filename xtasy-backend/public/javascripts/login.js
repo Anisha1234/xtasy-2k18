@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
 
     $("#loginform").submit( function () {
-        
+
         var loginForm = {
             emailid: $("#emailid").val(),
             password: $("#password").val()
@@ -20,28 +20,28 @@ $(document).ready(function () {
 
         console.log(loginForm);
 
-        $.post('api/login', loginForm, function (data, status) 
+        $.post('api/login', loginForm, function (data, status)
         {
-            
+
             console.log(data);
             if (data.msg) {
-                
+
                 if (data.msg == "admin") {
-                    
+
                     location.href = "/admin";
-                
+
                 } else {
-                    
+
                     if (data.msg == "successful") {
                         location.href = "/dashboard";
                     } else {
                         alert(data.msg);
                     }
-                
+
                 }
-            
+
             }
-        
+
         });
 
         return false;
@@ -56,8 +56,12 @@ $(document).ready(function () {
           },
          success: function(response) {
           console.log(response);
+
           alert(response.responseDesc || response.msg);
           location.reload();
+
+
+
          }
         });
         //Very important line, it disable the page refresh.

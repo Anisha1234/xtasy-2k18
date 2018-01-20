@@ -21,7 +21,7 @@ var userAuthenticate = function(req,res) {
               "name" : doc.name,
               "emailid" : doc.emailid,
               "college" : doc.college,
-              "xtasyid" : "xtasy#" + doc.xtasyid
+              "xtasyid" : "xtasy" + doc.xtasyid
             };
             req.session.user = details;
             res.json({"msg": "successful"});
