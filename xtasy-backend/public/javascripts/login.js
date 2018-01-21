@@ -8,6 +8,8 @@ $(document).ready(function () {
             if(urlParams.get('action') === "2") alert("You have not registered");
             if(urlParams.get('action') === "3") alert("You couldn't be verified");
             if(urlParams.get('action') === "4") alert("Session expired! You need to login");
+            if(urlParams.get('action') === "5") alert("Successfully logged out");
+
         }
     }
 

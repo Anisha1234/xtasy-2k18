@@ -10,12 +10,13 @@ autoIncrement.initialize(db);
 var userSchema = new Schema({
 
     //xtasyid : { type: String , default: "unassigned"},
-    name : { type : String },
-    emailid : { type : String },
-    password : { type : String },
-    college : { type : String },
-    isVerified: { type: Boolean, default: false }
-
+    name : { type : String , required : true},
+    emailid : { type : String , unique : true , required : true},
+    password : { type : String , required : true},
+    college : { type : String , required : true},
+    contact : { type : String , required : true},
+    gender : { type : String , required : true},
+    isVerified : { type: Boolean, default: false }
 });
 
 userSchema.plugin(autoIncrement.plugin, {
