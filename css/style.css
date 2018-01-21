@@ -1294,7 +1294,7 @@ vas .contact-info p {
 }
 
 .member-photo .mask {
-    background-color: rgba(87, 203, 204, 0.7);
+    background-color: #f90400;
     position: absolute;
     text-align: center;
     height: 100%;
