@@ -1,11 +1,45 @@
 <!doctype html>
 <html>
-    <head>
-        <%- include ../partials/_head %>
-    </head>
-    <body>
-    
-        <h2>This is dashboard!</h2>
 
-    </body>
+<head>
+    <%- include ../partials/_head %>
+</head>
+
+<body>
+  <button id="logout" class="btn btn-danger">Log Out</button>
+
+    <h2>This is dashboard!</h2>
+    <p>
+        <%= details.name %>
+    </p>
+    <p>
+        <%= details.college %>
+    </p>
+    <p>
+        <%= details.emailid %>
+    </p>
+    <p>
+        <%= details.gender %>
+    </p>
+    <p>
+        <%= details.contact %>
+    </p>
+
+    <div id="qrcode">
+
+    </div>
+
+</body>
+<script src="./javascripts/jquery.qrcode.js" type="text/javascript"></script>
+<script src="./javascripts/qrcode.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        var xtasyid = <%- JSON.stringify(details.xtasyid) %>  ;// To be changed
+        console.log(xtasyid);
+        $('#qrcode').qrcode(xtasyid);
+    });
+
+</script>
+<script src = "./javascripts/logout.js"></script>
+
 </html>

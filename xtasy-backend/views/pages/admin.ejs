@@ -5,20 +5,23 @@
    </head>
    <body>
     <h1>Admin</h1>
-    <table>
+    <button id="logout" class="btn btn-danger">Log Out</button>
+    <table class = "table table-hover">
       <tr>
+        <th>Xtasy ID</th>
         <th>NAME</th>
         <th>EMAIL ID</th>
         <th>COLLEGE</th>
       </tr>
       <% for(var i=0; i < users.length; i++) { %>
       <tr>
+        <td><%= users[i].xtasyid %></td>
        <td><%= users[i].name %></td>
        <td><%= users[i].emailid %></td>
        <td><%= users[i].college %></td>
       </tr>
       <% } %>
     </table>
-
+    <script src = "./javascripts/logout.js"></script>
   </body>
  </html>
