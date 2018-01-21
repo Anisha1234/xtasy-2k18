@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Almendra|Bubblegum+Sans|Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700") ; 
-
-
+@import url("https://fonts.googleapis.com/css?family=Almendra|Bubblegum+Sans|Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700");
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -92,24 +90,21 @@ h4,
 }
 
 @media screen and (max-device-width: 500px) {
-    @media screen and (max-device-width: 500px) {
-        .portfolio-items-wrapper {
-            margin: 30px;
-        }
-        .col-md-4 {
-            height: 400px;
-        }
-        .modal-dialog {
-            overflow-y: initial !important;
-            width: 100%;
-        }
-        .modal-body {
-            height: 700px;
-            overflow-y: auto;
-            font-size: 50px;
-        }
-        .portfolio-filter>button {
-            font-size: 40px;
-        }
+    .modal-dialog {
+        overflow-y: initial !important;
+        width: 100%;
+    }
+    .modal-body {
+        height: 350px;
+    }
+    .modal-header,
+    h4 {
+        font-size: 18px;
+    }
+    .modal-header {
+        padding: 5px !important;
+    }
+    .portfolio-filter>button {
+        font-size: 20px;
     }
 }
