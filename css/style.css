@@ -2195,111 +2195,134 @@ blockquote {
     margin: 0;
 }
 
+/*====================Cube=======================*/
 
-/*# sourceMappingURL=maps/style.css.map */
+    .wrap {
+                margin-top: 220px;
+                padding-top: 50px;
+                padding-bottom: 150px;
+                
+                perspective: 1000px;
+                perspective-origin: 50% 50%;
 
-/* =======================Events ==================*/
-.event-container{
-    padding: .5vw;
-    display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: wrap; 
-  flex-wrap: wrap; 
-  display: -webkit-box;
-  display: flex;
- 
-}
-.event-list{
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
-  width: 200px; 
-  margin: .5vw; 
-  
+            }
 
-}
 
-.event-image{
-    width: 100%; 
-    height: auto;
-    display: block;
-    border-radius: 30px;
+            .cube {
+                margin: auto;
+                position: relative;
+                height: 150px;
+                width: 150px;
+                transform-style: preserve-3d;
+            }
+
+            .cube div {
+                    position: absolute;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0.9;
+                    border: solid 1px #eee;
+                    color: #fff;
+                    font: 10px arial;
+                    transition: transform 0.2s ease-in;
+            }
+
+            .front {
+                transform: translateZ(50px);
+                background-image: url("../images/events/cube0.jpg");
+                background-size: contain;
+            }
+
+            .back {
+                transform: translateZ(-100px) rotateY(180deg);
+                background-image: url("../images/events/cube0.jpg");
+                background-size: contain;
+            }
+
+            .right {
+                transform: rotateY(-270deg) translateX(100px);
+                transform-origin: top right;
+                background-image: url("../images/events/cube0.jpg");
+                background-size: contain;
+            }
+
+            .left {
+                transform: rotateY(270deg) translateX(-100px);
+                transform-origin: center left;
+                background-image: url("../images/events/cube0.jpg");
+                background-size: contain;
+            }
+
+            .top {
+                transform: rotateX(-270deg) translateY(-100px);
+                transform-origin: top center;
+                background-image: url("../images/events/cube0.jpg");
+                background-size:contain;
+            }
+
+            .bottom {
+                transform: rotateX(270deg) translateY(100px);
+                transform-origin: bottom center;
+                background-image: url("../images/events/cube0.jpg");
+                background-size:contain;
     
-}
-@media screen and (max-width: 400px) {
-  .event-container .event-list { margin: 3px; }
-  .event-container { padding: 1px; }
-}
+            }
 
-  .event-container { 
+            @keyframes rotate {
+                from {
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
 
-    display: flex;
- }
+                to {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
 
-.e-img{
-    display: block;
-    border-radius: 20px;
-        
-}
-.e-img:hover{
-    filter: invert(100%);
-    animation: shake 0.5s;
-    animation-iteration-count:infinite;
-    background-color: red;
-    opacity: 0.4;
-    border: 2px solid black;
-    background-clip: padding-box;
+            .cube {
+                animation: rotate 20s infinite linear;
+            }
 
+            .wrap:hover .front {
+                transform: translateZ(150px);
+            }
 
-}
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-.overlay-container{
-    position: relative;
-    text-align: center;
-    color: white;
-}
-.text-centered{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5em;
-    font-family: eater;
-    -webkit-text-stroke-width: 1.4px;
-   -webkit-text-stroke-color: black; 
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-.text-centered:hover{
-    font-size: 3em;
-    transition: 2s;
-    -webkit-text-stroke: 1px black;
-   color: white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
-}
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
-    color: #fc1606;
-    background-color: #080808;
-    font-size: 30px;
-    text-shadow: white 1px 2px 3px;
+            .wrap:hover .back {
+                transform: translateZ(-200px) rotateY(180deg);
+            }
+
+            .wrap:hover .right {
+                transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+            }
+
+            .wrap:hover .left {
+                transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+            }
+
+            .wrap:hover .top {
+                transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+            }
+
+            .wrap:hover .bottom {
+                transform: rotateX(270deg) translateZ(100px) translateY(100px);
+            }
+            #wall{
+                background-position: center;
+                background-size:cover;
+                background-image: url("../images/events/image.jpg");
+            }
+            @media screen and (min-width: 960px)
+            {
+                .cube{
+                    height:220px;
+                    width: 220px;
+                }
+                .front {
+                    transform: translateZ(120px);
+                    
+                }
+                .wrap:hover .front {
+                    transform: translateZ(200px);
+                }
+            }
