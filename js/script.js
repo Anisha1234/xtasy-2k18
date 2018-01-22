@@ -5,7 +5,7 @@ jQuery(function ($) { "use strict";
 	/* ========================================================================= */
 	
 	window.onload = function () {
-		document.getElementById('preloader').style.display = 'none';
+		document.getElementById('loading').style.display = 'none';
 	}
 
 
