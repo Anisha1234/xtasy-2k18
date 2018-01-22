@@ -8,18 +8,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Meghna One page parallax responsive HTML Template ">
-
-    <meta name="author" content="Muhammad Morshed">
-
     <title>Xtasy-2k18</title>
 
     <!-- Mobile Specific Meta
 		================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" /> -->
 
     <!-- CSS
 		================================================== -->
@@ -36,9 +30,6 @@
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/events.css">
-    <!-- timer stylesheet -->
-    <link rel="stylesheet" href="css/timer.css">
     <style>
         .navbar {
             margin-bottom: 0;
@@ -54,8 +45,14 @@
             height: 300px;
         }
     </style>
+
     <!--Scary Font source in Events-->
     <script src='http://use.edgefonts.net/eater.js'></script>
+    <link rel="stylesheet" href="css/events.css">
+    <!-- timer stylesheet -->
+    <link rel="stylesheet" href="css/timer.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
 
 </head>
 
@@ -81,7 +78,7 @@
     <!--
         End Preloader
         ==================================== -->
-    
+
 
     <!--
         Navbar
@@ -104,7 +101,7 @@
                     <li class="nav-text"><a href="team.html">Team</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-text"><a href="#">Login / Register</a></li>
+                    <li class="nav-text"><a href="login.html">Login / Register</a></li>
                 </ul>
             </div>
         </div>
@@ -113,31 +110,31 @@
     <!--
 Welcome Slider
 ==================================== -->
-    
+
     <section class="hero-area parallax-section">
         <!-- <div class="block">  -->
         <div class="main-container">
-                <div><img src="images/logo.png">
-                    <h1 style="margin-left:20%">Xtasy-2k18</h1>
+            <div><img src="images/logo.png">
+                <h1 style="margin-left:20%">Xtasy-2k18</h1>
+            </div>
+            <div id="clockdiv">
+                <div>
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
                 </div>
-                <div id="clockdiv">
-                    <div>
-                        <span class="days"></span>
-                        <div class="smalltext">Days</div>
-                    </div>
-                    <div>
-                        <span class="hours"></span>
-                        <div class="smalltext">Hours</div>
-                    </div>
-                    <div>
-                        <span class="minutes"></span>
-                        <div class="smalltext">Minutes</div>
-                    </div>
-                    <div>
-                        <span class="seconds"></span>
-                        <div class="smalltext">Seconds</div>
-                    </div>
+                <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
                 </div>
+                <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
+            </div>
         </div>
 
 
@@ -152,7 +149,7 @@ Welcome Slider
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 padding-0 ">
-                    <img style="height:auto" style="padding-top:10px" class="img-responsive" src="images/about/about-business-man.jpg" alt="">
+                    <img style="height:auto" style="padding-top:10px" class="img-responsive" src="images/about.jpeg" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="content-block">
@@ -481,7 +478,7 @@ Welcome Slider
 
         <!-- Google Map -->
         <div class="google-map">
-            <div id="map-canvas"></div>
+            <div id="map_canvas"></div>
         </div>
         <!-- /Google Map -->
 
@@ -514,7 +511,7 @@ Welcome Slider
                     </div>
                     <!--/. End Footer Social Links -->
 
-                
+
 
                 </div>
                 <!-- end col lg 12 -->
@@ -555,7 +552,7 @@ Welcome Slider
     <script type="text/javascript" src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
     <!-- Magnific popup -->
     <script type="text/javascript" src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <!-- Google Map API -->
+    <!-- google maps-->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <!-- Sticky Nav -->
     <script type="text/javascript" src="plugins/Sticky/jquery.sticky.js"></script>

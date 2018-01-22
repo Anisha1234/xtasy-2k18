@@ -190,7 +190,7 @@ jQuery(function ($) { "use strict";
 	/*	Google Map Customization
 	/* =========================================================================  */
 
-	function initialize() {
+	/*function initialize() {
 
 		var myLatLng = new google.maps.LatLng(22.333851, 91.812256);
 
@@ -304,4 +304,39 @@ jQuery(function ($) { "use strict";
 	}
 
 	google.maps.event.addDomListener(window, "load", initialize);
+*/
+     var map;
+     function initialize() {
+        var grayStyles = [{
+            featureType: "all",
+            stylers: [{
+                saturation: -200
+            }, {
+                lightness: -20
+            }]
 
+        }];
+
+        var mapOptions = {
+            center: new google.maps.LatLng(20.2764, 85.7758),
+            zoom: 15,
+            styles: grayStyles,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+       
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(20.2764, 85.7758)
+            });
+            marker.setMap(map);
+
+        }
+        function resp() {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, "resize");
+            map.setCenter(center);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, "resize", resp);

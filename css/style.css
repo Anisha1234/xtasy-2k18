@@ -12,8 +12,8 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700") ;                                          
-    html {
+@import url("https://fonts.googleapis.com/css?family=Almendra|Bubblegum+Sans|Freckle+Face|Gochi+Hand|Vast+Shadow|Sedgwick+Ave+Display:400, 600, 700");
+html {
     background-color: #353b43;
     color: #737f8a;
 }
@@ -23,6 +23,7 @@ body {
     font-family: "Sedgwick Ave Display", sans-serif;
     color: #737f8a;
     -webkit-font-smoothing: antialiased;
+    font-size: 2.5em;
 }
 
 h1,
@@ -36,7 +37,7 @@ h6 {
 }
 
 p {
-    font-family: "Sedgwick Ave Display", sans-serif;
+    font-family: "Bubblegum Sans", sans-serif;
 }
 
 
@@ -84,7 +85,7 @@ a:hover {
 
 a:focus,
 a:hover {
-    color: #6CB670;
+    color: #fc1606;
 }
 
 .kill-margin-bottom {
@@ -209,7 +210,7 @@ a:hover {
     background-size: cover;
 }
 
-.bg-two{
+.bg-two {
     background-color: #353b43
 }
 
@@ -721,37 +722,38 @@ a:hover {
     margin-top: 20px;
 }
 
-.main-block{
-    width: 100%; 
+.main-block {
+    width: 100%;
     height: auto;
     display: block;
-    border-radius: 30px;  
+    border-radius: 30px;
 }
 
-.main-container{
+.main-container {
     padding: .5vw;
     display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: wrap; 
-  flex-wrap: wrap; 
-  display: -webkit-box;
-  display: flex;
-  z-index:3;  
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: wrap;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: flex;
+    z-index: 3;
 }
 
-@media (max-width:400px){
-    .main-conatiner{
+@media (max-width:400px) {
+    .main-conatiner {
         padding: .5vw;
         display: -ms-flexbox;
-      -ms-flex-wrap: wrap;
-      -ms-flex-direction: row;
-      -webkit-flex-flow: wrap; 
-      flex-wrap: wrap; 
-      display: -webkit-box;
-      display: flex;
+        -ms-flex-wrap: wrap;
+        -ms-flex-direction: row;
+        -webkit-flex-flow: wrap;
+        flex-wrap: wrap;
+        display: -webkit-box;
+        display: flex;
     }
 }
+
 .dark-bg {
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
@@ -936,11 +938,11 @@ a:hover {
     margin: 0;
 }
 
-.google-map #map-canvas {
+.google-map #map_canvas {
     height: 400px;
 }
 
-.contact-info p {
+vas .contact-info p {
     margin-bottom: 25px;
 }
 
@@ -1292,7 +1294,7 @@ a:hover {
 }
 
 .member-photo .mask {
-    background-color: rgba(87, 203, 204, 0.7);
+    background-color: #f90400;
     position: absolute;
     text-align: center;
     height: 100%;
