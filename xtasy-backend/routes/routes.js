@@ -21,4 +21,12 @@ router.get("/dashboard", function(req, res) {
   }
 });
 
+/*router.get("/reset", function(req,res,next){
+  res.render("./pages/passwordreset")
+}) */
+
+router.get("/forgot", function (req,res,next) {
+  res.render("./pages/forgot")
+})
+
 module.exports = router;
