@@ -24,10 +24,12 @@
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
 
+    <link rel="stylesheet" href="css/particle.css">
+
 </head>
 
 <body>
-
+    <div id="particles-js"></div>
     <!--
         Start Preloader
         ==================================== -->
@@ -77,18 +79,18 @@
     <div><br/><br/><br/></div>
     <!-- Page title -->
     <div class="title text-center">
-        <h2><span class="color">Events</span></h2>
+        <h2><span class="color" id="element">Events</span></h2>
         <div class="border"></div>
     </div>
 
     <!-- Filters -->
-    <div class="portfolio-filter">
-        <button type="button" data-filter="all">All</button>
-        <button type="button" data-filter=".technical">Technical</button>
-        <button type="button" data-filter=".cultural">Cultural</button>
-        <button type="button" data-filter=".literary">Literary</button>
-        <button type="button" data-filter=".fun">Fun</button>
-        <button type="button" data-filter=".extravaganza">Cultural Extravaganza</button>
+    <div class="portfolio-filter" style="z-index: 4;">
+        <button type="button" data-filter="all" id="element">All</button>
+        <button type="button" data-filter=".technical" id="element">Technical</button>
+        <button type="button" data-filter=".cultural" id="element">Cultural</button>
+        <button type="button" data-filter=".literary" id="element">Literary</button>
+        <button type="button" data-filter=".fun" id="element">Fun</button>
+        <button type="button" data-filter=".extravaganza" id="element">Cultural Extravaganza</button>
     </div>
 
 
@@ -371,7 +373,6 @@
 
 
 
-
     <!-- 
 		Essential Scripts
 		=====================================-->
@@ -395,6 +396,9 @@
     <!-- Custom js -->
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/events.js"></script>
+    <!--Background Animation-->
+    <script src='plugins/particles.min.js'></script>
+    <script src="js/particle.js"></script>
 
 </body>
 
