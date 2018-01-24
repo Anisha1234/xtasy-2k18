@@ -36,10 +36,10 @@ var passwordReset = function (req,res) {
                 transport.close()
                 if (error) {
                     console.log(error);
-                    res.json({ "msg": 'Error in sending mail!' });
+                    res.redirect("/login?action=3")
                 } else {
                     console.log("Mail has been sent")
-                    res.json({ "msg": 'A mail has been sent to you for verification' });
+                    res.redirect("/login?action=7");
                 }
             })
           });

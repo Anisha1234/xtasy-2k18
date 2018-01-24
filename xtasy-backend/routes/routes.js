@@ -26,7 +26,11 @@ router.get("/dashboard", function(req, res) {
 }) */
 
 router.get("/forgot", function (req,res,next) {
-  res.render("./pages/forgot")
-})
+  res.render("./pages/forgot");
+});
+
+router.get("/events", function(req,res,next){
+  res.render("./pages/events");
+});
 
 module.exports = router;
