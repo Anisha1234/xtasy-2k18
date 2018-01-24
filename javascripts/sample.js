@@ -25,7 +25,7 @@
       event.preventDefault();
       event.stopPropagation();
       $this = $(this);
-      $this.closest('.brick').remove();
+      
       return $('.gridly').gridly('layout');
     });
     $(document).on("click", ".add", function(event) {

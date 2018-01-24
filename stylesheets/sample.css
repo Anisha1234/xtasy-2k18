@@ -10,7 +10,8 @@ html {
 
 body, html, p, h1, h2, h3, h4, h5, h6 {
   font-family: "Sedgwick Ave Display", sans-serif;
-  font-weight: normal; }
+  font-weight: normal; 
+background: cover;}
 
 code {
   font-family: "Consolas", "Monaco", monospace;
@@ -29,7 +30,8 @@ pre {
 
 .content {
   width: 980px;
-  margin: 80px auto; }
+  margin: 80px auto; 
+ }
 
 .formats .format {
   display: inline-block; }
@@ -96,9 +98,11 @@ pre .string.value {
     .example .brick.dragging {
       opacity: 0.8; }
     .example .brick:nth-child(20n + 1) {
-      background: #1ABC9C; }
+     background-image: url("xtasy.jpg");
+      background-size: cover; }
     .example .brick:nth-child(20n + 2) {
-      background: #16A085; }
+      background-image: url("xtasy.jpg");
+      background-size: cover; }
     .example .brick:nth-child(20n + 3) {
       background: #2ECC71; }
     .example .brick:nth-child(20n + 4) {
