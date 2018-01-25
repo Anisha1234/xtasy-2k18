@@ -162,7 +162,7 @@
             </div>
         </div>
         <div class="container">
-            <button type="button" class="btn btn-group-lg btn-danger">Print</button>
+            <button id="btx" type="button" class="btn btn-group-lg btn-danger">Print</button>
         </div>
     </div>
 
@@ -173,6 +173,9 @@
             var xtasyid = <%- JSON.stringify(details.xtasyid) %>  ;
             console.log(xtasyid);
             $('#qrcode').qrcode(xtasyid);
+            $('#btx').click( function() {
+                window.print();
+            })
         });
 
     </script>
