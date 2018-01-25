@@ -68,13 +68,13 @@ Copyright 2015 Kevin Sylvestre
       this.toggle();
     }
 
-    Draggable.prototype.bind = function(method) {
-      if (method == null) {
-        method = 'on';
-      }
-      $(document)[method]('mousemove touchmove', this.moved);
-      return $(document)[method]('mouseup touchcancel', this.ended);
-    };
+    // Draggable.prototype.bind = function(method) {
+    //   if (method == null) {
+    //     method = 'on';
+    //   }
+    //   $(document)[method]('mousemove touchmove', this.moved);
+    //   return $(document)[method]('mouseup touchcancel', this.ended);
+    // };
 
     Draggable.prototype.toggle = function(method) {
       if (method == null) {

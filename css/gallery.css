@@ -95,8 +95,7 @@ pre .string.value {
     .example .brick.large {
       width: 300px;
       height: 300px; }
-    .example .brick.dragging {
-      opacity: 0.8; }
+    
     .example .brick:nth-child(20n + 1) {
       background-image: url("../images/gallery/xtasy.jpg");
       background-size: cover; }
