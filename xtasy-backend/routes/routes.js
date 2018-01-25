@@ -33,4 +33,12 @@ router.get("/events", function(req,res,next){
   res.render("./pages/events");
 });
 
+router.get("/gallery" , function(req,res,next){
+  res.render("./pages/gallery");
+});
+
+router.get("/team" , function(req,res,next){
+  res.render("./pages/team");
+});
+
 module.exports = router;

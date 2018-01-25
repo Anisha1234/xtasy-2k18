@@ -1,14 +1,552 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>perception index page</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <h1>The index page of perception</h1>
-    <p>Hello World!</p>
-  </body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Xtasy-2k18</title>
+
+    <!-- Mobile Specific Meta
+		================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- CSS
+		================================================== -->
+    <!-- Fontawesome Icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font for the page -->
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="plugins/animate-css/animate.css">
+    <!-- Magnific popup css -->
+    <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        
+        .modal-dialog {
+            width: 65%;
+            margin: auto;
+        }
+        
+        .modal-body {
+            height: 300px;
+        }
+    </style>
+
+    <!--Scary Font source in Events-->
+    <script src='http://use.edgefonts.net/eater.js'></script>
+    <link rel="stylesheet" href="stylesheets/events.css">
+    <!-- timer stylesheet -->
+    <link rel="stylesheet" href="stylesheets/timer.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--
+	    Start Preloader
+	    ==================================== -->
+<div id="loading">
+    <div class="loading-text">
+        <span class="loading-text-words">H</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">H</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">H</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">H</span>
+        <span class="loading-text-words">A</span>
+    </div>
+</div>
+    <!--
+        End Preloader
+        ==================================== -->
+
+
+    <!--
+        Navbar
+        ==================================== -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">XTASY 2K18</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-text active"><a href="/">Home</a></li>
+                    <li class="nav-text current"><a href="/events">Events</a></li>
+                    <li class="nav-text"><a href="/gallery">Gallery</a></li>
+                    <li class="nav-text"><a href="/team">Team</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-text"><a href="/login">Login / Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+Welcome Slider
+==================================== -->
+
+    <section class="hero-area parallax-section">
+        <!-- <div class="block">  -->
+        <div class="main-container">
+            <div><img src="images/logo.png">
+                <h1 style="margin-left:20%">Xtasy-2k18</h1>
+            </div>
+            <div id="clockdiv">
+                <div>
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- </div> -->
+    </section>
+
+
+    <!--
+        About and Trailer
+        =====================-->
+    <section class="section about-2 padding-0 bg-dark" id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 padding-0 ">
+                    <img style="height:auto" style="padding-top:10px" class="img-responsive" src="images/about.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="content-block">
+                        <!-- section title -->
+                        <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+                            <h2>About <span class="color">US</span> </h2>
+                            <div class="border"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p>Xtasy</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of about-->
+    <!--
+		Start Star Nights
+		==================================== -->
+    <section class="parallax-section bg-one about section">
+        <div class="container">
+            <div class="row">
+                <!-- section title -->
+                <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+                    <h2>Star<span class="color"> Nights</span> </h2>
+                    <div class="border"></div>
+                </div>
+                <!-- /section title -->
+                <div class="col-md-1"></div>
+                <!-- 1st star event -->
+                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+                    <a id="myBtn1" style="cursor:pointer;">
+                        <div class="block">
+                            <div>
+                                <img src="images/events/event4.jpg" class="image" style="border-radius:15px;">
+                            </div>
+                            <!-- Express About Yourself -->
+                            <div class="content text-center">
+                                <h3 class="ddd">We're Creative</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4>Star Night 1</h4>
+                                </div>
+                                <div class="modal-body" style="padding:40px 50px;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End 1st star night -->
+
+                <div class="col-md-2"></div>
+
+                <!-- 2nd star event -->
+                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+                    <a id="myBtn2" style="cursor:pointer;">
+                        <div class="block">
+                            <div>
+                                <img src="images/events/event5.jpg" class="image" style="border-radius:15px;">
+                            </div>
+                            <!-- Express About Yourself -->
+                            <div class="content text-center">
+                                <h3 class="ddd">We're Creative</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal2" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4>Star Night 2</h4>
+                                </div>
+                                <div class="modal-body" style="padding:40px 50px;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End 2nd star night -->
+
+                <div class="col-md-1"></div>
+
+
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- End section -->
+    <!-- Start home page event Section
+==================================== -->
+
+    <section id="services" class="bg-two section">
+        <div id="wall">
+       
+            
+
+                <!-- section title -->
+                <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+                    <h2> <span class="color">events</span></h2>
+                    <div class="border"></div>
+                </div>
+                <!-- /section title -->
+
+                <p class="text-center event-des fadeIn">Click on the Cosmic Cube to view the events</p>
+                <!-- Event container -->
+           <a href="/events">
+                <div class="wrap">
+                    <div class="cube">
+                        <div class="front">
+                            
+                        </div>
+                        <div class="back">
+                            
+                        </div>
+                        <div class="top">
+                            
+                        </div>
+
+                        <div class="bottom">
+                            
+                        </div>
+                        <div class="left">
+                            
+                        </div>
+                        <div class="right">
+                            
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <!-- End Event container -->
+
+                <br>
+
+        </div>    
+    </section>
+    <!-- End home page event section -->
+
+
+    <!--
+        Gallery
+        ============-->
+    <section id="counter" class="parallax-section bg-1 section">
+        <!-- section title -->
+        <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+            <h2><span class="color">Gallery</span></h2>
+            <div class="border"></div>
+        </div>
+        <!-- /section title -->
+
+        <div class="container">
+
+            <!-- single blog post -->
+
+            <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                <div class="post-block">
+                    <div id="gallery-post" class="media-wrapper" style="border-radius:25px;">
+                        <div class="item">
+                            <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+            <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                <div class="post-block">
+                    <div id="gallery-post" class="media-wrapper" style="border-radius:25px;">
+                        <div class="item">
+                            <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+            <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                <div class="post-block">
+                    <div id="gallery-post" class="media-wrapper" style="border-radius:25px;">
+                        <div class="item">
+                            <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-3.jpg" alt="blog post" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img src="images/blog/blog-post-1.jpg" alt="blog post | Meghna" class="img-responsive">
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+
+
+        </div>
+        <!-- end container -->
+        <div class="all-post text-center">
+            <a href="/gallery" class="btn btn-main">View All Post</a>
+        </div>
+    </section>
+    <!--end of gallery-->
+
+
+
+    <!-- Srart Contact Us
+=========================================== -->
+    <section id="contact-us" class="contact-us section-bg">
+        <div class="container">
+            <div class="row">
+
+                <!-- section title -->
+                <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+                    <h2>Get In <span class="color">Touch</span></h2>
+                    <div class="border"></div>
+                </div>
+                <!-- /section title -->
+
+                <!-- Contact Details -->
+                <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
+                    <h3>Contact Details</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
+                    <div class="contact-details">
+                        <div class="con-info clearfix">
+                            <i class="tf-map-pin"></i>
+                            <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+                        </div>
+
+                        <div class="con-info clearfix">
+                            <i class="tf-ion-ios-telephone-outline"></i>
+                            <span>Phone: +880-31-000-000</span>
+                        </div>
+
+                        <div class="con-info clearfix">
+                            <i class="tf-ion-iphone"></i>
+                            <span>Fax: +880-31-000-000</span>
+                        </div>
+
+                        <div class="con-info clearfix">
+                            <i class="tf-ion-ios-email-outline"></i>
+                            <span>Email: hello@meghna.com</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Contact Details -->
+
+                <!-- Contact Form -->
+                <div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <form id="contact-form" method="post" action="sendmail.php" role="form">
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
+                        </div>
+
+                        <div id="mail-success" class="success">
+                            Thank you. The Mailman is on His Way :)
+                        </div>
+
+                        <div id="mail-fail" class="error">
+                            Sorry, don't know what happened. Try later :(
+                        </div>
+
+                        <div id="cf-submit">
+                            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+                        </div>
+
+                    </form>
+                </div>
+                <!-- ./End Contact Form -->
+
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+
+        <!-- Google Map -->
+        <div class="google-map">
+            <div id="map_canvas"></div>
+        </div>
+        <!-- /Google Map -->
+
+    </section>
+    <!-- end section -->
+
+
+
+
+
+    <!-- end Contact Area
+		========================================== -->
+
+    <footer id="footer" class="bg-two">
+        <div class="container">
+            <div class="row wow fadeInUp" data-wow-duration="500ms">
+                <div class="col-lg-12">
+
+                    <!-- Footer Social Links -->
+                    <div class="social-icon">
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/xtasycetbbsr/?hc_ref=ARRzt1Gk74Yr5ZB1QjbDCGD4Hx7ldwSTva_z_DfGa-TpZKKQGmTFNERQ9WKDgmHsyfA"><i class="tf-ion-social-facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=Zi51D6TpWjE"><i class="tf-ion-social-youtube"></i></a></li>
+                           
+                        </ul>
+                    </div>
+                    <!--/. End Footer Social Links -->
+
+
+
+                </div>
+                <!-- end col lg 12 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </footer>
+    <!-- end footer -->
+
+    <div id="scroll-up">
+        up
+    </div>
+
+    <!-- Main jQuery -->
+    <script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script type="text/javascript" src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Slick Carousel -->
+    <script type="text/javascript" src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Portfolio Filtering -->
+    <script type="text/javascript" src="plugins/mixitup/dist/mixitup.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script type="text/javascript" src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+    <!-- Magnific popup -->
+    <script type="text/javascript" src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- google maps-->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <!-- Sticky Nav -->
+    <script type="text/javascript" src="plugins/Sticky/jquery.sticky.js"></script>
+    <!-- Number Counter Script -->
+    <script type="text/javascript" src="plugins/count-to/jquery.countTo.js"></script>
+    <!-- wow.min Script -->
+    <script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="javascripts/script.js"></script>
+    <!-- timer js -->
+    <script type="text/javascript" src="javascripts/timer.js"></script>
+
+    <script type="text/javascript" src="javascripts/events.js"></script>
+
+</body>
+
 </html>
