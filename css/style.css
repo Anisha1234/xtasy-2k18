@@ -1266,7 +1266,10 @@ vas .contact-info p {
 
 .team-member {
     background-color: #292F36;
-    margin-top:20px;
+}
+
+.team-box {
+    margin-top: 4%;
 }
 
 .team-member:hover .mask {
