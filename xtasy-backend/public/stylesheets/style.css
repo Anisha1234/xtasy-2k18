@@ -8,22 +8,38 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 */
 
 
+/*font-family: 'Acme', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Hammersmith One', sans-serif;
+font-family: 'Oleo Script', cursive;
+font-family: 'Bubblegum Sans', cursive;
+font-family: 'Jockey One', sans-serif; -----
+font-family: 'Capriola', sans-serif;
+font-family: 'Artifika', serif;
+font-family: 'Germania One', cursive; -------------------
+font-family: 'Cantora One', sans-serif;
+*/
+
+
 /*=== MEDIA QUERY ===*/
 
-@import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Almendra|Bubblegum+Sans|Freckle+Face|Gochi+Hand|Vast+Shadow|Sedgwick+Ave+Display:400, 600, 700");
+@import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
 html {
-    background-color: #353b43;
+    background-color: #f4f6f8;
     color: #737f8a;
 }
 
 body {
     background-color: #353b43;
-    font-family: "Sedgwick Ave Display", sans-serif;
+    font-family: 'Jockey One', sans-serif;
     color: #737f8a;
     -webkit-font-smoothing: antialiased;
     font-size: 2.5em;
+}
+
+#element {
+    letter-spacing: 2px;
 }
 
 h1,
@@ -32,12 +48,12 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    font-family: "Sedgwick Ave Display", sans-serif;
+    font-family: 'Oleo Script', cursive;
     color: #afbac4;
 }
 
 p {
-    font-family: "Bubblegum Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -566,7 +582,7 @@ a:hover {
     width: 100%;
     z-index: 99;
     margin-bottom: 0;
-    padding: 10px;
+    padding: 0px;
 }
 
 .navigation .logo {
@@ -585,7 +601,7 @@ a:hover {
 }
 
 .navigation .navigation-menu li a {
-    font-size: 20px;
+    font-size: 15px !important;
     color: #737f8a;
 }
 
@@ -1279,10 +1295,11 @@ vas .contact-info p {
     -webkit-transform: rotateY(0deg) scale(1, 1);
     transform: rotateY(0deg) scale(1, 1);
 }
-.mixi{
+
+.mixi {
     text-align: center;
     padding: 5px;
-    height :330px ;
+    height: 330px;
 }
 
 .member-photo {
@@ -1294,7 +1311,6 @@ vas .contact-info p {
     .member-photo {
         text-align: center;
     }
-    
 }
 
 .member-photo:hover img {
@@ -1311,32 +1327,31 @@ vas .contact-info p {
         display: inline-block;
     }
     .member-photo .mask ul {
-    text-align: center;
-    position: relative;
-    margin: auto;
-    top : 20% !important;
-}
-.member-meta {
-    padding: none;
-}
-.member-meta h4 {
-    font-size : 15px !important;
-}
-
-.member-meta span {
-    font-size : 12px !important;
-}
-.member-photo .mask ul li a {
-    border: 1px solid #fff;
-    color: #fff;
-    display: block;
-    font-size: 15px !important;
-    height: 20px !important;
-    line-height: 20px !important;
-    text-align: center;
-    width: 20px !important;
-    margin: none !important;
-}
+        text-align: center;
+        position: relative;
+        margin: auto;
+        top: 20% !important;
+    }
+    .member-meta {
+        padding: none;
+    }
+    .member-meta h4 {
+        font-size: 15px !important;
+    }
+    .member-meta span {
+        font-size: 12px !important;
+    }
+    .member-photo .mask ul li a {
+        border: 1px solid #fff;
+        color: #fff;
+        display: block;
+        font-size: 15px !important;
+        height: 20px !important;
+        line-height: 20px !important;
+        text-align: center;
+        width: 20px !important;
+        margin: none !important;
+    }
 }
 
 .member-photo .mask {
@@ -1358,7 +1373,7 @@ vas .contact-info p {
     text-align: center;
     position: relative;
     margin: auto;
-    top : 50%;
+    top: 50%;
 }
 
 .member-photo .mask ul li a {
@@ -1372,7 +1387,6 @@ vas .contact-info p {
     width: 30px;
     padding: none !important;
 }
-
 
 .member-photo .mask ul li a:hover {
     background-color: #fff;
@@ -1390,7 +1404,7 @@ vas .contact-info p {
 
 .member-meta span {
     font-size: 12px;
-    color:#fff;
+    color: #fff;
 }
 
 
@@ -2251,8 +2265,7 @@ blockquote {
 .navbar-inverse .navbar-nav>.active>a:focus {
     color: #fc1606;
     background-color: #080808;
-    font-size: 30px;
-    text-shadow: white 1px 2px 3px;
+    font-size: 24px;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -2261,7 +2274,7 @@ blockquote {
 }
 
 .nav-text {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .navbar-inverse .navbar-nav>li>a {

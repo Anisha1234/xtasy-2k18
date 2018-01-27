@@ -28,6 +28,8 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/gallery.css">
+    <link rel="stylesheet" href="stylesheets/particle.css">
+    <link rel="stylesheet" href="stylesheets/events.css">
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
     <style>
@@ -37,7 +39,6 @@
         }
     </style>
     <meta charset='UTF-8'>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='stylesheets/jquery.gridly.css' rel='stylesheet' type='text/css'>
     <!-- <link href='styleshee -->ts/sample.css' rel='stylesheet' type='text/css'>
 
@@ -48,7 +49,7 @@
         _gaq.push(['_setAccount', 'UA-31911059-1']);
         _gaq.push(['_trackPageview']);
 
-        (function () {
+        (function() {
             var ga = document.createElement('script');
             ga.type = 'text/javascript';
             ga.async = true;
@@ -57,7 +58,7 @@
             s.parentNode.insertBefore(ga, s);
         })();
 
-        window.onload = function () {
+        window.onload = function() {
             document.getElementById('loading').style.display = 'none';
         }
     </script>
@@ -69,6 +70,7 @@
 
 
 <body>
+    <div id="particles-js"></div>
     <!--
         Start Preloader
         ==================================== -->
@@ -138,7 +140,7 @@ Start Gallery page
             <!-- section title -->
             <div class="title text-center wow fadeInDown">
                 <h2>
-                    <span class="color text-center">Gallery Page</span>
+                    <span class="color text-center" id="element">Gallery Page</span>
                 </h2>
                 <div class="border"></div>
             </div>
@@ -228,7 +230,7 @@ Start Gallery page
 
     <!-- Main jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <!-- <script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>  -->
+    <!-- <script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>  -->
     <!-- Bootstrap 3.1 -->
     <script type="text/javascript" src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Slick Carousel -->
@@ -250,8 +252,12 @@ Start Gallery page
     <!-- Custom js -->
     <!-- <script type="text/javascript" src="javascripts/script.js"></script> -->
     <!-- Gallery js -->
-   <!-- <script src='javascripts/jquery.js' type='text/javascript'></script>  -->
+    <!-- <script src='javascripts/jquery.js' type='text/javascript'></script>  -->
     <script src='javascripts/jquery.gridly.js' type='text/javascript'></script>
     <script src='javascripts/sample.js' type='text/javascript'></script>
     <script src='javascripts/rainbow.js' type='text/javascript'></script>
+    <!--Background Animation-->
+    <script src='plugins/particles.min.js'></script>
+    <script src="javascripts/particle.js"></script>
+
 </body>
