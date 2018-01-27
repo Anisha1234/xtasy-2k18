@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Almendra|Bubblegum+Sans|Freckle+Face|Gochi+Hand|Sedgwick+Ave+Display:400, 600, 700");
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.modal-header,
+h4,
+.close {
+    background-color: #353b43;
+    color: white !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    overflow-y: initial !important;
+    width: 80%;
+    margin: auto;
+}
+
+.modal-body {
+    height: 400px;
+    overflow-y: auto;
+    font-size: 20px;
+    font-family: "Almendra", sans-serif;
+}
+
+.modal-header {
+    padding: 15px !important;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fc1606;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 30px;
+}
+
+.container:hover .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fc1606e8;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.portfolio-items-wrapper {
+    margin: 20px;
+}
+
+.portfolio-filter>button {
+    font-size: 27px;
+    color: rgb(231, 231, 231);
+}
+
+@media screen and (max-device-width: 500px) {
+    .modal-dialog {
+        overflow-y: initial !important;
+        width: 100%;
+    }
+    .modal-body {
+        height: 350px;
+    }
+    .modal-header,
+    h4 {
+        font-size: 18px;
+    }
+    .modal-header {
+        padding: 5px !important;
+    }
+    .portfolio-filter>button {
+        font-size: 20px;
+    }
+}

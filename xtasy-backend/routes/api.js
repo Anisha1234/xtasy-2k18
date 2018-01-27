@@ -11,6 +11,13 @@ var find = require("../controllers/findid");
 
 var logout = require("../controllers/logout");
 
+var forgot = require("../controllers/passwordresetmailer");
+
+var reset = require("../controllers/resetpassword");
+
+var change = require("../controllers/changepassword");
+
+
 router.get("/" , function(req,res){
     res.json({"msg" : "hello world"})
 })
@@ -23,6 +30,13 @@ router.get("/logout" , logout.userDestroy );
 
 router.get("/verify" , verify.verifyMail );
 
+router.post("/forgot" , forgot.passwordReset );
+
+router.get("/reset" , reset.verifyReset);
+
 router.get("/find", find.findId);
+
+router.post("/change", change.changePassword);
+
 
 module.exports = router;

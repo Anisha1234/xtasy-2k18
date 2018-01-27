@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <%- include ../partials/_head %>
+  </head>
+  <body>
+    <h1>Enter email id</h1>
+    <form id="forgot" action = "/api/forgot" method = "post">
+      <label for="forgot">Email Id:</label>
+      <input id="emailid" type="email" placeholder="Enter your Email Id" name="emailid" required>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

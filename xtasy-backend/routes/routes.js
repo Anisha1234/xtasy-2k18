@@ -21,4 +21,24 @@ router.get("/dashboard", function(req, res) {
   }
 });
 
+/*router.get("/reset", function(req,res,next){
+  res.render("./pages/passwordreset")
+}) */
+
+router.get("/forgot", function (req,res,next) {
+  res.render("./pages/forgot");
+});
+
+router.get("/events", function(req,res,next){
+  res.render("./pages/events");
+});
+
+router.get("/gallery" , function(req,res,next){
+  res.render("./pages/gallery");
+});
+
+router.get("/team" , function(req,res,next){
+  res.render("./pages/team");
+});
+
 module.exports = router;

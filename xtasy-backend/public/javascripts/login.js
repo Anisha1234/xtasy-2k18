@@ -9,6 +9,8 @@ $(document).ready(function () {
             if(urlParams.get('action') === "3") alert("You couldn't be verified");
             if(urlParams.get('action') === "4") alert("Session expired! You need to login");
             if(urlParams.get('action') === "5") alert("Successfully logged out");
+            if(urlParams.get('action') === "6") alert("Your password has been successfully reset");
+            if(urlParams.get('action') === "7") alert("A mail has been sent to you");
 
         }
     }
