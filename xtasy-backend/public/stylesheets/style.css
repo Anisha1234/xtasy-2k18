@@ -1365,11 +1365,12 @@ vas .contact-info p {
     border: 1px solid #fff;
     color: #fff;
     display: block;
-    font-size: 15px;
-    height: 35px;
-    line-height: 35px;
+    font-size: 25px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    width: 35px;
+    width: 30px;
+    padding: none !important;
 }
 
 
