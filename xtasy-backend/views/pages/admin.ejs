@@ -1,27 +1,97 @@
- <!DOCTYPE html>
- <html>
-   <head>
-     <%- include ../partials/_head %>
-   </head>
-   <body>
-    <h1>Admin</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Admin</title>
+    <!-- Mobile Specific Meta
+              ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+      ================================================== -->
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/admin.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
+    <script>
+        window.onload = function() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+    </script>
+    <%- include ../partials/_head %>
+        <style>
+            #logout {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+</head>
+
+<body>
+    <!-- Page title -->
+    <div class="title text-center">
+        <h2><span class="color" id="element">Admin</span></h2>
+        <div class="border"></div>
+    </div>
+
+    <div id="preloader">
+        <div class="preloader">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </div>
+
+
     <button id="logout" class="btn btn-danger">Log Out</button>
-    <table class = "table table-hover">
-      <tr>
-        <th>Xtasy ID</th>
-        <th>NAME</th>
-        <th>EMAIL ID</th>
-        <th>COLLEGE</th>
-      </tr>
-      <% for(var i=0; i < users.length; i++) { %>
-      <tr>
-        <td><%= users[i].xtasyid %></td>
-       <td><%= users[i].name %></td>
-       <td><%= users[i].emailid %></td>
-       <td><%= users[i].college %></td>
-      </tr>
-      <% } %>
-    </table>
-    <script src = "./javascripts/logout.js"></script>
-  </body>
- </html>
+    <div style=" width:97%; margin:auto; overflow-x:auto;">
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th>Xtasy ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL ID</th>
+                    <th>COLLEGE</th>
+                </tr>
+            </thead>
+            <% for(var i=0; i < users.length; i++) { %>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%= users[i].xtasyid %>
+                        </td>
+                        <td>
+                            <%= users[i].name %>
+                        </td>
+                        <td>
+                            <%= users[i].emailid %>
+                        </td>
+                        <td>
+                            <%= users[i].college %>
+                        </td>
+                    </tr>
+                </tbody>
+                <% } %>
+        </table>
+    </div>
+    <script src="./javascripts/logout.js"></script>
+    <script src="./javascripts/admin.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
+</body>
+
+</html>
