@@ -68,8 +68,8 @@
                     <th>COLLEGE</th>
                 </tr>
             </thead>
-            <% for(var i=0; i < users.length; i++) { %>
-                <tbody>
+            <tbody>
+                <% for(var i=0; i < users.length; i++) { %>
                     <tr>
                         <td>
                             <%= users[i].xtasyid %>
@@ -84,8 +84,8 @@
                             <%= users[i].college %>
                         </td>
                     </tr>
-                </tbody>
-                <% } %>
+                    <% } %>
+            </tbody>
         </table>
     </div>
     <script src="./javascripts/logout.js"></script>
