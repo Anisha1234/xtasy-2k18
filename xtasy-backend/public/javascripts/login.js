@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    window.onload = function() {
+        document.getElementById('preloader').style.display = 'none';
+    }
 
     if (window.location.search) {
         var urlParams = new URLSearchParams(window.location.search);
@@ -64,6 +67,8 @@ $(document).ready(function() {
             },
             success: function(response) {
                 console.log(response);
+                //$("#sound1").get(0).play();
+                document.getElementById('sound1').play();
 
                 alert(response.responseDesc || response.msg);
                 $("#wait").css("display", "none");
