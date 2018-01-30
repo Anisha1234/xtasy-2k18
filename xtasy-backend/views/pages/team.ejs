@@ -31,6 +31,8 @@
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="stylesheets/style.css">
         <link rel="stylesheet" href="stylesheets/events.css">
+
+        <link rel="stylesheet" href="stylesheets/particle.css">
         <style>
 
         </style>
@@ -38,7 +40,7 @@
     </head>
 
     <body>
-
+        <div id="particles-js"></div>
         <!--
             Start Preloader
             ==================================== -->
@@ -95,18 +97,18 @@
         <!-- Page title -->
         <div class="title text-center">
             <h2>Our
-                <span class="color">Team</span>
+                <span class="color" id="element">Team</span>
             </h2>
             <div class="border"></div>
         </div>
 
         <!-- Filters -->
         <div class="portfolio-filter" style="margin-top: -2%;">
-            <button type="button" data-filter="all">All</button>
-            <button type="button" data-filter=".convenors">Convenors</button>
-            <button type="button" data-filter=".Cordinators">Cordinators</button>
-            <button type="button" data-filter=".web">Web designers</button>
-            <button type="button" data-filter=".vol">volunteers</button>
+            <button type="button" data-filter="all" id="element">All</button>
+            <button type="button" data-filter=".convenors" id="element">Convenors</button>
+            <button type="button" data-filter=".Cordinators" id="element">Cordinators</button>
+            <button type="button" data-filter=".web" id="element">Web designers</button>
+            <button type="button" data-filter=".vol" id="element">volunteers</button>
         </div>
 
 
@@ -578,5 +580,7 @@
         <!-- Custom js -->
         <script type="text/javascript" src="javascripts/script.js"></script>
         <script type="text/javascript" src="javascripts/events.js"></script>
-
+        <!--Background Animation-->
+        <script src='plugins/particles.min.js'></script>
+        <script src="javascripts/particle.js"></script>
     </body>
