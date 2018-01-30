@@ -8,4 +8,8 @@ $(document).ready(function() {
     $("#myBtn7").click(function() { $("#myModal7").modal(); });
     $("#myBtn8").click(function() { $("#myModal8").modal(); });
     $("#myBtn9").click(function() { $("#myModal9").modal(); });
+    $("#myBtn10").click(function() { $("#myModal10").modal(); });
+    $("#myBtn11").click(function() { $("#myModal11").modal(); });
+    $("#myBtn12").click(function() { $("#myModal12").modal(); });
+    $("#myBtn13").click(function() { $("#myModal13").modal(); });
 });
