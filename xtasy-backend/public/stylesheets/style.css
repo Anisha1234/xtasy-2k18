@@ -19,12 +19,22 @@ font-family: 'Capriola', sans-serif;
 font-family: 'Artifika', serif;
 font-family: 'Germania One', cursive; -------------------
 font-family: 'Cantora One', sans-serif;
+
+font-family: 'Francois One', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Passion One', cursive;
+font-family: 'Concert One', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Hammersmith One', sans-serif;
+font-family: 'Monoton', cursive;
+
 */
 
 
 /*=== MEDIA QUERY ===*/
 
 @import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
+
 html {
     background-color: #f4f6f8;
     color: #737f8a;
@@ -48,8 +58,8 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    font-family: 'Oleo Script', cursive;
     color: #afbac4;
+    font-family: 'Oleo Script', cursive;
 }
 
 p {
@@ -471,6 +481,8 @@ a:hover {
     font-weight: 700;
     font-size: 38px;
     color: #fff;
+    text-shadow: 1px 1px 5px #000;
+    font-family: 'Oleo Script', cursive;
 }
 
 .title h2 span {
@@ -1373,7 +1385,7 @@ vas .contact-info p {
     text-align: center;
     position: relative;
     margin: auto;
-    top: 50%;
+    top: 40%;
 }
 
 .member-photo .mask ul li a {
@@ -2265,13 +2277,28 @@ blockquote {
 .navbar-inverse .navbar-nav>.active>a:focus {
     color: #fc1606;
     background-color: #080808;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
     color: #fc1606;
     background-color: transparent;
 }
+
+/*
+
+
+font-family: 'Francois One', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Passion One', cursive; --
+font-family: 'Concert One', cursive;
+font-family: 'Fredoka One', cursive; --
+font-family: 'Hammersmith One', sans-serif; --
+font-family: 'Monoton', cursive;
+
+*/
+
+
 
 .nav-text {
     font-size: 18px;

@@ -41,8 +41,9 @@ $(document).ready(function() {
                 } else {
 
                     if (data.msg == "successful") {
-                        location.href = "/dashboard";
+                        location.href = "/profile";
                     } else {
+                        $("#wait").css("display", "none");
                         alert(data.msg);
                     }
 
@@ -50,7 +51,6 @@ $(document).ready(function() {
 
             }
 
-            //$("#wait").css("display", "none");
 
         });
 
@@ -63,6 +63,7 @@ $(document).ready(function() {
         $("#wait").css("display", "block");
         $(this).ajaxSubmit({
             error: function(xhr) {
+                $("#wait").css("display", "none");
                 alert('Error: ' + xhr.status);
             },
             success: function(response) {

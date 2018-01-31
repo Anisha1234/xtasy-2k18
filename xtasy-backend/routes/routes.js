@@ -7,18 +7,20 @@ router.get('/', function(req, res, next) {
   res.render('./pages/index');
 });
 
-router.get("/login" , function(req,res ,next){
-  res.render("./pages/login")
-})
+router.get("/login" , function(req, res,next){
+  if(req.session.user) {
+    if(req.session.user === "admin") res.redirect('/admin');
+    else res.redirect('/profile');
+  } else res.render("./pages/login");
+});
 
 router.get("/admin" , admin.displayAll);
 
-router.get("/dashboard", function(req, res) {
-  if(req.session.user && req.session.user !== "admin") {
-    res.render('./pages/dashboard' , { "details" : req.session.user });
-  } else {
-    res.redirect("/login?action=4");
-  }
+router.get("/profile", function(req, res) {
+  if(req.session.user) {
+    if(req.session.user === "admin") res.redirect('/admin');
+    else res.render('./pages/profile' , { "details" : req.session.user });
+  } else res.redirect("/login?action=4");
 });
 
 /*router.get("/reset", function(req,res,next){

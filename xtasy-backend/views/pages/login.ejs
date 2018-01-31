@@ -90,18 +90,18 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>                        
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
                 </button>
                 <a class="navbar-brand" href="/">XTASY 2K18</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="nav-text"><a href="/">Home</a></li>
                     <li class="nav-text"><a href="/events">Events</a></li>
                     <li class="nav-text"><a href="/gallery">Gallery</a></li>
                     <li class="nav-text"><a href="/team">Team</a></li>
+                    <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-text active current"><a href="/login">Login / Register</a></li>
@@ -136,7 +136,7 @@
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Login to Xtasy</h3>
-                                    <p>Enter username and password to log on:</p>
+                                    <p>Enter email and password to log on:</p>
                                 </div>
                                 <div class="form-top-right">
                                     <i class="fa fa-key"></i>
@@ -147,7 +147,7 @@
                                     <div class="form-group">
                                         <label class="sr-only" for="form-username">Username</label>
                                         <span><i class="fa fa-user"></i></span>
-                                        <input type="email" name="form-username" placeholder="Email" class="form-username form-control" id="emailid" required>
+                                        <input type="email" name="form-username" placeholder="Email" class="form-username form-control input-lg" id="emailid" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-password">Password</label>
@@ -181,45 +181,44 @@
 	                            </div>
 	                            <div class="form-bottom">
 				                    <form id="regform" action='api/register' method="post" class="registration-form">
-				                    	<div class="form-group">
-				                    		<label  for="form-name">Name</label>
-				                        	<input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
-				                        </div>
-                                <div class="form-group">
-	                        	      <label for="form-name">Email</label>
-	                        	      <input name="emailid" type="text" class="form-control" placeholder="Email" id="emailid2" required>
-	                               </div>
+                                        <div class="form-group">
+                                            <label  for="form-name">Name</label>
+                                            <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="form-name">Email</label>
+                                            <input name="emailid" type="text" class="form-control" placeholder="Email" id="emailid2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone number">Phone Number</label>
+                                            <input name="contact" type="text" class="form-control input-lg" placeholder="Phone No" id="contact" required>
+                                        </div>
+                                        <div class="form-group" >
+                                            <label for="Gender">Gender</label>
+                                            <select type="text" class="form-control input-lg" id="gender" name="gender">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
 
-	                        <div class="form-group">
-	                        	<label for="phone number">Phone Number</label>
-	                        	<input name="contact" type="text" class="form-control input-lg" placeholder="Phone No" id="contact" required>
-	                        </div>
-							<div class="form-group" >
-	                        	<label for="Gender">Gender</label>
-	                        	<select type="text" class="form-control" id="gender" name="gender">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-	                        </div>
-
-							<div class="form-group">
-	                        	<label for="College Name">College</label>
-	                        	<input name="college" type="text" class="form-control" placeholder="College" id="college" required>
-	                        </div>
+                                        <div class="form-group">
+                                            <label for="College Name">College</label>
+                                            <input name="college" type="text" class="form-control" placeholder="College" id="college" required>
+                                        </div>
 
 
-                            <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <div class="input-group pb-modalreglog-input-group">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input name="password" type="password" class="form-control" id="password2" placeholder="Password" required>
-                                    </div>
-                            </div>
-                            <div class="g-recaptcha" data-sitekey="6LflXkEUAAAAAO1UTbxrb01mKe8j9SaAlJg5ns0H"></div>
-                            <audio id="sound1" src="assets/audio/login_audio.mp3" preload="auto"></audio>
-                            <button type="submit" class="button">Submit</button>
-                            </form>
-                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <div class="input-group pb-modalreglog-input-group">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                                <input name="password" type="password" class="form-control" id="password2" placeholder="Password" required>
+                                            </div>
+                                        </div>
+                                        <div class="g-recaptcha" data-sitekey="6LflXkEUAAAAAO1UTbxrb01mKe8j9SaAlJg5ns0H"></div>
+                                        <audio id="sound1" src="assets/audio/login_audio.mp3" preload="auto"></audio>
+                                        <button type="submit" class="button">Submit</button>
+                                    </form>
+                                </div>
                     </div>
 
                 </div>
