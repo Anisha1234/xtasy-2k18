@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" style="background-color:#353b43; overflow-x:hidden;">
+<html class="no-js" style="background-color: aliceblue; overflow-x:hidden;">
 <!--<![endif]-->
 
 <head>
@@ -23,7 +23,7 @@
         </script>
         <style>
             .dash-text {
-                color: aliceblue;
+                color: rgb(3, 3, 3);
                 font-family: 'Vast Shadow', cursive;
                 font-size: 20px;
             }
@@ -38,6 +38,10 @@
             
             a {
                 cursor: pointer;
+            }
+            
+            body {
+                background-color: aliceblue;
             }
         </style>
 </head>
@@ -120,7 +124,7 @@
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-5 dash-text">
-                        <u>Name</u>
+                        <b>Name</b>
                     </div>
                     <div class="col-md-7 dash-text">
                         <%= details.name %>
@@ -128,7 +132,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5 dash-text">
-                        <u>Email Id</u>
+                        <b>Email Id</b>
                     </div>
                     <div class="col-md-7 dash-text">
                         <%= details.emailid %>
@@ -136,7 +140,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5 dash-text">
-                        <u>Phone No.</u>
+                        <b>Phone No.</b>
                     </div>
                     <div class="col-md-7 dash-text">
                         <%= details.contact %>
@@ -144,7 +148,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5 dash-text">
-                        <u>Gender</u>
+                        <b>Gender</b>
                     </div>
                     <div class="col-md-7 dash-text">
                         <%= details.gender %>
@@ -152,7 +156,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5 dash-text">
-                        <u>College</u>
+                        <b>College</b>
                     </div>
                     <div class="col-md-7 dash-text">
                         <%= details.college %>
