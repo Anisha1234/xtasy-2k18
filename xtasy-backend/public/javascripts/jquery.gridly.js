@@ -320,24 +320,8 @@ Copyright 2015 Kevin Sylvestre
 
     Gridly.prototype.draggingMoved = function(event) {
       var $dragging, $elements, element, i, index, j, k, len, original, positions, ref, ref1, ref2;
-      $dragging = $(event.target).closest(this.$(this.settings.draggable.selector));
-      $elements = this.$sorted(this.$(this.settings.draggable.selector));
-      positions = this.structure($elements).positions;
-      original = index = $dragging.data('position');
-      ref = positions.filter(function(position) {
-        return position.$element.is($dragging);
-      });
-      for (j = 0, len = ref.length; j < len; j++) {
-        element = ref[j];
-        element.x = $dragging.position().left;
-        element.y = $dragging.position().top;
-        element.w = $dragging.data('width') || $dragging.outerWidth();
-        element.h = $dragging.data('height') || $dragging.outerHeight();
-      }
-      positions.sort(this.compare);
-      $elements = positions.map(function(position) {
-        return position.$element;
-      });
+     
+      
       $elements = (((ref1 = this.settings.callbacks) != null ? ref1.optimize : void 0) || this.optimize)($elements);
       for (i = k = 0, ref2 = $elements.length; 0 <= ref2 ? k < ref2 : k > ref2; i = 0 <= ref2 ? ++k : --k) {
         this.reordinalize($($elements[i]), i);
