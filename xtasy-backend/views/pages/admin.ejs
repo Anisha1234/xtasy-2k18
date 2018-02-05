@@ -87,7 +87,17 @@
                     <% } %>
             </tbody>
         </table>
+        <div class="container" style="text-align:center;">
+            <button id="btx" type="button" class="btn btn-group-lg btn-danger">Print</button>
+        </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#btx').click(function() {
+                window.print();
+            })
+        });
+    </script>
     <script src="./javascripts/logout.js"></script>
     <script src="./javascripts/admin.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
