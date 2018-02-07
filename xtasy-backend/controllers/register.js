@@ -37,7 +37,7 @@ var createUser = function (req, res) {
         }
         //res.json({"responseCode" : 0,"responseDesc" : "Sucess"});
 
-
+        req.body.emailid = req.body.emailid.trim();
         UserModel.findOne({ "emailid": req.body.emailid }, function (err, doc) {
 
             if (!doc) {
@@ -50,7 +50,7 @@ var createUser = function (req, res) {
                         // Store hash in your password DB.
                         var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid + '&code=' + hash;
                         var mail = {
-                            from: "xtasy <3" + ' <ramakpatt@gmail.com>',
+                            from: "xtasy" + ' <ramakpatt@gmail.com>',
                             to: newUser.emailid,
                             subject: "Verification mail",
                             html: "<p>" + "Click on the below link to verify " + link + "</p>"

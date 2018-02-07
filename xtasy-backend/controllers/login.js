@@ -10,7 +10,7 @@ var userAuthenticate = function(req,res) {
     } else {
 
 
-    UserModel.findOne({"emailid" : req.body.emailid, "isVerified" : true} , function(err,doc) {
+    UserModel.findOne({"emailid" : req.body.emailid.trim() , "isVerified" : true} , function(err,doc) {
       console.log(doc);
       if(err) throw err;
       if(doc){
