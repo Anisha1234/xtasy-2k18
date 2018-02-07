@@ -37,7 +37,7 @@ var createUser = function (req, res) {
         }
         //res.json({"responseCode" : 0,"responseDesc" : "Sucess"});
 
-        req.body.emailid = req.body.emailid.trim();
+        req.body.emailid = req.body.emailid.toLowerCase().trim();
         UserModel.findOne({ "emailid": req.body.emailid }, function (err, doc) {
 
             if (!doc) {
