@@ -1767,13 +1767,19 @@ vas .contact-info p {
     margin-bottom: 4px;
 }
 
-.social-icon ul li:hover a {
+.social-icon ul li:hover a.fb-icon {
+    background-color: #3a5897;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.social-icon ul li:hover a.yt-icon {
     background-color: #fc1606;
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
-.social-icon ul li:hover a i {
+.social-icon ul li:hover a i{
     color: #fff;
     opacity: 1;
     filter: alpha(opacity=100);
@@ -1848,6 +1854,9 @@ vas .contact-info p {
     border: 1px solid #fc1606;
 }
 
+#foot{
+    color: white;
+}
 
 /*=================================================================
 	Twitter Feed
