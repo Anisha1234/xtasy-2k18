@@ -159,7 +159,7 @@ p {
 
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:focus {
-    color: #fc1606 !important;
+    color: #fff !important;
     background-color: #080808 !important;
     font-size: 24px !important;
 }
