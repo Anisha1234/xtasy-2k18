@@ -11,7 +11,7 @@ var verifyReset = function(req,res) {
       if(isMatch) {
         UserModel.findOne({emailid : req.query.email} , function(err,doc) {
           if(err) throw err;
-      //    if(!doc) res.redirect("/login?action=2") // res.send("invalid mail");
+          if(!doc) res.redirect("/login?action=2") // res.send("invalid mail");
           res.render("./pages/passwordreset" , {"mail" : doc.emailid})
       //    else res.redirect("/login?action=1")
         } );

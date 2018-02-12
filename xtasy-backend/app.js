@@ -31,9 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/api', api);
 
-mongoose.connect('mongodb://localhost:27017/xtasy',{
-  useMongoClient: true
-});
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/xtasy' , { useMongoClient: true })
+
 var db = mongoose.connection;
 db.once('open', function () {
   console.log("Connection to MongoDB succesful...");

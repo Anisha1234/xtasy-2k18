@@ -5,7 +5,7 @@ const UserModel = require('../models/user');
 var displayAll = function(req, res) {
     if (req.session.user && req.session.user == "admin") {
         var query = UserModel.find({ isVerified: true });
-        query.select('name emailid college xtasyid');
+        query.select('name emailid college xtasyid contact');
 
         query.exec(function(err, user) {
             if (err) throw err;

@@ -37,7 +37,7 @@ var createUser = function (req, res) {
         }
         //res.json({"responseCode" : 0,"responseDesc" : "Sucess"});
 
-
+        req.body.emailid = req.body.emailid.toLowerCase().trim();
         UserModel.findOne({ "emailid": req.body.emailid }, function (err, doc) {
 
             if (!doc) {
@@ -50,17 +50,17 @@ var createUser = function (req, res) {
                         // Store hash in your password DB.
                         var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid + '&code=' + hash;
                         var mail = {
-                            from: "xtasy <3" + ' <ramakpatt@gmail.com>',
+                            from: "xtasy" + ' <ramakpatt@gmail.com>',
                             to: newUser.emailid,
                             subject: "Verification mail",
-                            html: "<p>" + "Click on the below link to verify " + link + "</p>"
+                            html: "<p>" + "Click on the <a style='color:red;' href = " + link + " >link</a> to verify.</p>"
                         }
 
                         transport.sendMail(mail, (error, response) => {
                             transport.close()
                             if (error) {
                                 console.log(error);
-                                res.json({ "msg": 'Error in sending mail!' });
+                                res.json({ "msg": 'Error in sending mail! Please register again' });
                             } else {
                                 UserModel.saveUser(newUser, function (err, doc) {
                                     if (err) throw err;
