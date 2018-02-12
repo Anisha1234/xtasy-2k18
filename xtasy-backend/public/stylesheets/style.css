@@ -1311,7 +1311,8 @@ vas .contact-info p {
 .mixi {
     text-align: center;
     padding: 5px;
-    height: 330px;
+    height: 270px;
+
 }
 
 .member-photo {
@@ -1334,7 +1335,7 @@ vas .contact-info p {
     transition: all 0.4s ease 0s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     .member-photo img {
         display: inline-block;
     }
@@ -1364,7 +1365,15 @@ vas .contact-info p {
         width: 20px !important;
         margin: none !important;
     }
+     .mixi {
+    text-align: center;
+    padding: 5px;
+    height: 200px !important;
+
 }
+   
+}
+
 
 .member-photo .mask {
     background-color: rgba(239, 18, 2, 0.4);
