@@ -367,7 +367,8 @@ a:hover {
 =======================================================================*/
 
 #preloader {
-    background: #fff;
+    background: black;
+    background-size: cover;
     height: 100%;
     left: 0;
     opacity: 1;

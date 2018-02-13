@@ -1,4 +1,4 @@
-<OCTYPE html>
+<!DOCTYPE html>
     <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
     <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -31,11 +31,14 @@
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="stylesheets/style.css">
         <link rel="stylesheet" href="stylesheets/events.css">
-
         <link rel="stylesheet" href="stylesheets/particle.css">
-        <style>
-
-        </style>
+        <script>
+        
+        window.onload = function() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+        
+        </script>
 
     </head>
 
@@ -46,17 +49,7 @@
             ==================================== -->
         <div id="preloader">
             <div class="preloader">
-                <div class="sk-cube-grid">
-                    <div class="sk-cube sk-cube1"></div>
-                    <div class="sk-cube sk-cube2"></div>
-                    <div class="sk-cube sk-cube3"></div>
-                    <div class="sk-cube sk-cube4"></div>
-                    <div class="sk-cube sk-cube5"></div>
-                    <div class="sk-cube sk-cube6"></div>
-                    <div class="sk-cube sk-cube7"></div>
-                    <div class="sk-cube sk-cube8"></div>
-                    <div class="sk-cube sk-cube9"></div>
-                </div>
+                <img src="images/preloader.gif">
             </div>
         </div>
         <!--
@@ -96,8 +89,8 @@
         </div>
         <!-- Page title -->
         <div class="title text-center">
-            <h2>Our
-                <span class="color" id="element">Team</span>
+            <h2 id="element">Our
+                <span class="color">Team</span>
             </h2>
             <div class="border"></div>
         </div>
@@ -578,7 +571,6 @@
         <!-- wow.min Script -->
         <script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
         <!-- Custom js -->
-        <script type="text/javascript" src="javascripts/script.js"></script>
         <script type="text/javascript" src="javascripts/events.js"></script>
         <!--Background Animation-->
         <script src='plugins/particles.min.js'></script>
