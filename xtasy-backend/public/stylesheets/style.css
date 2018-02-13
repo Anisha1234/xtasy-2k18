@@ -34,6 +34,13 @@ font-family: 'Monoton', cursive;
 /*=== MEDIA QUERY ===*/
 
 @import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+/*@font-face {
+    font-family: audrey;
+    src: url("/home/pallavi/Downloads/Audrey/Audrey/Audrey-Medium.otf") format("opentype");
+}*/
+
 
 html {
     background-color: #f4f6f8;
@@ -42,7 +49,7 @@ html {
 
 body {
     background-color: #353b43;
-    font-family: 'Jockey One', sans-serif;
+    font-family: 'Lato', sans-serif !important;
     color: #737f8a;
     -webkit-font-smoothing: antialiased;
     font-size: 2.5em;
@@ -59,11 +66,11 @@ h5,
 h6 {
     font-weight: 400;
     color: #afbac4;
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Poiret One', cursive;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -482,7 +489,7 @@ a:hover {
     font-size: 38px;
     color: #fff;
     text-shadow: 1px 1px 5px #000;
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Poiret One', cursive;
 }
 
 .title h2 span {
@@ -955,6 +962,7 @@ a:hover {
     background-color: transparent;
     border: 1px solid rgba(236, 239, 241, 0.07);
     height: 45px;
+    font-size: 15px;
 }
 
 .contact-form textarea.form-control {
@@ -966,6 +974,7 @@ a:hover {
 .contact-form textarea:hover,
 #contact-submit:hover {
     border-color: #fc1606;
+    color:white;
 }
 
 #contact-submit {
@@ -974,6 +983,9 @@ a:hover {
     padding: 12px 0;
     width: 100%;
     margin: 0;
+    color:black;
+    font-size:16px;
+    font-weight: bold;
 }
 
 .google-map #map_canvas {
@@ -2291,9 +2303,9 @@ blockquote {
     margin: 0;
 }
 
-.navbar-inverse .navbar-nav>.active>a,
+.-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:focus {
-    color: #fc1606;
+    color: #fc1606; 
     background-color: #080808;
     font-size: 20px;
 }
@@ -2319,7 +2331,7 @@ font-family: 'Monoton', cursive;
 
 
 .nav-text {
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Philosopher', sans-serif;
 }
 
@@ -2462,4 +2474,17 @@ navbar-inverse .navbar-brand {
 .event-des {
     color: white;
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+.regbtn
+{
+        padding: 0 15px;
+        line-height: 40px;
+        color:white;
+        letter-spacing: .5px;
+        background:rgb(155, 0, 0);
+        position: absolute;
+        right:    0;
+        bottom:   0;
+        margin-right:5px;
+        margin-bottom:5px;
 }
