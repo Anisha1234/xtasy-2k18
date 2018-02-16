@@ -36,11 +36,11 @@ font-family: 'Monoton', cursive;
 @import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
 @import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
 /*@font-face {
     font-family: audrey;
     src: url("/home/pallavi/Downloads/Audrey/Audrey/Audrey-Medium.otf") format("opentype");
 }*/
-
 
 html {
     background-color: #f4f6f8;
@@ -653,21 +653,13 @@ a:hover {
     background-attachment: fixed;
 }
 
-.hero-area {
-    background-image: url("../images/backgrounds/villains1.jpg");
+.landing {
+    background-image: url("../images/backgrounds/main_background.jpg");
     /* opacity: 0.1%; */
-    background-size: cover;
-    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .hero-area:before {
@@ -975,7 +967,7 @@ a:hover {
 .contact-form textarea:hover,
 #contact-submit:hover {
     border-color: #fc1606;
-    color:white;
+    color: white;
 }
 
 #contact-submit {
@@ -984,8 +976,8 @@ a:hover {
     padding: 12px 0;
     width: 100%;
     margin: 0;
-    color:black;
-    font-size:16px;
+    color: black;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -1325,7 +1317,6 @@ vas .contact-info p {
     text-align: center;
     padding: 5px;
     height: 270px;
-
 }
 
 .member-photo {
@@ -1378,15 +1369,12 @@ vas .contact-info p {
         width: 20px !important;
         margin: none !important;
     }
-     .mixi {
-    text-align: center;
-    padding: 5px;
-    height: 200px !important;
-
+    .mixi {
+        text-align: center;
+        padding: 5px;
+        height: 200px !important;
+    }
 }
-   
-}
-
 
 .member-photo .mask {
     background-color: rgba(239, 18, 2, 0.4);
@@ -1801,7 +1789,7 @@ vas .contact-info p {
     transform: rotateY(0deg);
 }
 
-.social-icon ul li:hover a i{
+.social-icon ul li:hover a i {
     color: #fff;
     opacity: 1;
     filter: alpha(opacity=100);
@@ -1876,9 +1864,10 @@ vas .contact-info p {
     border: 1px solid #fc1606;
 }
 
-#foot{
+#foot {
     color: white;
 }
+
 
 /*=================================================================
 	Twitter Feed
@@ -2306,7 +2295,7 @@ blockquote {
 
 .-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:focus {
-    color: #fc1606; 
+    color: #fc1606;
     background-color: #080808;
     font-size: 20px;
 }
@@ -2315,6 +2304,7 @@ blockquote {
     color: #fc1606;
     background-color: transparent;
 }
+
 
 /*
 
@@ -2328,8 +2318,6 @@ font-family: 'Hammersmith One', sans-serif; --
 font-family: 'Monoton', cursive;
 
 */
-
-
 
 .nav-text {
     font-size: 20px;
@@ -2476,16 +2464,16 @@ navbar-inverse .navbar-brand {
     color: white;
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
 }
-.regbtn
-{
-        padding: 0 15px;
-        line-height: 40px;
-        color:white;
-        letter-spacing: .5px;
-        background:rgb(155, 0, 0);
-        position: absolute;
-        right:    0;
-        bottom:   0;
-        margin-right:5px;
-        margin-bottom:5px;
+
+.regbtn {
+    padding: 0 15px;
+    line-height: 40px;
+    color: white;
+    letter-spacing: .5px;
+    background: rgb(155, 0, 0);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }

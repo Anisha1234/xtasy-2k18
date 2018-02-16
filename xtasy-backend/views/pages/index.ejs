@@ -70,8 +70,11 @@
             height: 300px;
         }
         
-
-
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
     </style>
 
     <!--Scary Font source in Events-->
@@ -128,19 +131,14 @@
 Welcome Slider
 ==================================== -->
 
-    <section class="hero-area parallax-section">
+    <section class="landing parallax-section">
         <!-- <div class="block">  -->
-        <div class="main-container">
-            <div><img src="images/logo.png">
-                <h1 style="margin-left:20%">Xtasy-2k18</h1>
-            </div>
+        <div>
+            <!-- <span class="font-display" style="font-family: 'Audrey';" data-gramm_id="b1e9d137-257d-e406-8416-fd0e595daf26" data-gramm="true" spellcheck="false" data-gramm_editor="true" contenteditable="true">The quick brown fox jumps over the lazy dog</span>-->
+            <!-- <button type="button" class="regbtn"> -->
+            <a class="regbtn" href="/login">Register</a>
+            <!-- </button> -->
         </div>
-      <div>
-           <!-- <span class="font-display" style="font-family: 'Audrey';" data-gramm_id="b1e9d137-257d-e406-8416-fd0e595daf26" data-gramm="true" spellcheck="false" data-gramm_editor="true" contenteditable="true">The quick brown fox jumps over the lazy dog</span>-->
-          <!-- <button type="button" class="regbtn"> -->
-          <a class="regbtn" href="/login">Register</a>
-        <!-- </button> -->
-    </div>
 
     </section>
 
@@ -283,7 +281,7 @@ Welcome Slider
         </div>
         <!-- /section title -->
 
-        
+
         <!-- Event container -->
         <a href="/events" data-toggle="tooltip" data-placement="auto" title="click to view events">
             <div class="wrap">
@@ -335,7 +333,7 @@ Welcome Slider
 
             <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
                 <div class="post-block">
-                    <div id="gallery-post" class="media-wrapper" >
+                    <div id="gallery-post" class="media-wrapper">
                         <div class="item">
                             <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
@@ -352,7 +350,7 @@ Welcome Slider
             </article>
             <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
                 <div class="post-block">
-                    <div id="gallery-post" class="media-wrapper" >
+                    <div id="gallery-post" class="media-wrapper">
                         <div class="item">
                             <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
@@ -369,7 +367,7 @@ Welcome Slider
             </article>
             <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
                 <div class="post-block">
-                    <div id="gallery-post" class="media-wrapper" >
+                    <div id="gallery-post" class="media-wrapper">
                         <div class="item">
                             <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
@@ -412,27 +410,28 @@ Welcome Slider
                 <!-- Contact Details -->
                 <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
                     <h3>Contact Details</h3>
-                    <font size ="3"><p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
-                    <div class="contact-details">
-                        <div class="con-info clearfix">
-                            <i class="tf-map-pin"></i>
-                            <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
-                        </div>
+                    <font size="3">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
+                        <div class="contact-details">
+                            <div class="con-info clearfix">
+                                <i class="tf-map-pin"></i>
+                                <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+                            </div>
 
-                        <div class="con-info clearfix">
-                            <i class="tf-ion-ios-telephone-outline"></i>
-                            <span>Phone: +880-31-000-000</span>
-                        </div>
+                            <div class="con-info clearfix">
+                                <i class="tf-ion-ios-telephone-outline"></i>
+                                <span>Phone: +880-31-000-000</span>
+                            </div>
 
-                        <div class="con-info clearfix">
-                            <i class="tf-ion-iphone"></i>
-                            <span>Fax: +880-31-000-000</span>
-                        </div>
+                            <div class="con-info clearfix">
+                                <i class="tf-ion-iphone"></i>
+                                <span>Fax: +880-31-000-000</span>
+                            </div>
 
-                        <div class="con-info clearfix">
-                            <i class="tf-ion-ios-email-outline"></i>
-                            <span>Email: hello@meghna.com</span></font>
-                        </div>
+                            <div class="con-info clearfix">
+                                <i class="tf-ion-ios-email-outline"></i>
+                                <span>Email: hello@meghna.com</span></font>
+                    </div>
                     </div>
                 </div>
                 <!-- / End Contact Details -->
@@ -470,7 +469,7 @@ Welcome Slider
                         </div>
 
                     </form>
-                </div>  
+                </div>
                 <!-- ./End Contact Form -->
 
             </div>
@@ -479,9 +478,10 @@ Welcome Slider
         <!-- end container -->
 
         <!-- Google Map -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.575418479405!2d85.77365031442214!3d20.27643608641061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7f9d486f7c3%3A0xde71ead59307dcca!2sCollege+of+Engineering+And+Technology!5e0!3m2!1sen!2sin!4v1518210880783" width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.575418479405!2d85.77365031442214!3d20.27643608641061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7f9d486f7c3%3A0xde71ead59307dcca!2sCollege+of+Engineering+And+Technology!5e0!3m2!1sen!2sin!4v1518210880783"
+            width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        
+
         <!-- /Google Map -->
 
     </section>
@@ -508,7 +508,8 @@ Welcome Slider
                         </ul>
                     </div>
                     <!--/. End Footer Social Links -->
-                    <p style="text-align: center; color: ##a09e9e;"><span id="foot">Made with love : ZAIRZA</span><p>
+                    <p style="text-align: center; color: ##a09e9e;"><span id="foot">Made with love : ZAIRZA</span>
+                        <p>
 
 
                 </div>
@@ -521,7 +522,7 @@ Welcome Slider
     <!-- end footer -->
 
     <div id="scroll-up">
-        
+
     </div>
 
     <!-- Main jQuery -->
