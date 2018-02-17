@@ -16,6 +16,7 @@ var userSchema = new Schema({
     college : { type : String , required : true},
     contact : { type : String , required : true},
     gender : { type : String , required : true},
+    accomodation: {type : String, required: true, enum: [ "yes", "no" ], default: "no" },
     isVerified : { type: Boolean, default: false }
 });
 
