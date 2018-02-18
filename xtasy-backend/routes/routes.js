@@ -20,7 +20,7 @@ router.get("/profile", function(req, res) {
   if(req.session.user) {
     if(req.session.user === "admin") res.redirect('/admin');
     else res.render('./pages/profile' , { "details" : req.session.user });
-  } else res.redirect("/login?action=4");
+  } else res.redirect("/login");
 });
 
 /*router.get("/reset", function(req,res,next){
