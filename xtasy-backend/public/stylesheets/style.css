@@ -2490,3 +2490,10 @@ img-responsive {
     max-width: 100%;
     height: auto;
 }
+
+@media screen and (max-width: 850px) {
+    #logodiv {
+        width: 100%;
+        padding-top: 50%;
+    }
+}
