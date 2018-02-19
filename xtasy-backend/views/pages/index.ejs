@@ -72,38 +72,32 @@
         
 
 
+
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+ 
     </style>
 
     <!--Scary Font source in Events-->
     <script src='http://use.edgefonts.net/eater.js'></script>
     <link rel="stylesheet" href="stylesheets/events.css">
-    <!-- timer stylesheet -->
-    <link rel="stylesheet" href="stylesheets/timer.css">
-    <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <div id="wait"><img src='images/loader.gif' width="64" height="64" class="loader" /></div>
 
     <!--
 	    Start Preloader
 	    ==================================== -->
     <div id="preloader">
         <div class="preloader">
-            <div class="sk-cube-grid">
-                <div class="sk-cube sk-cube1"></div>
-                <div class="sk-cube sk-cube2"></div>
-                <div class="sk-cube sk-cube3"></div>
-                <div class="sk-cube sk-cube4"></div>
-                <div class="sk-cube sk-cube5"></div>
-                <div class="sk-cube sk-cube6"></div>
-                <div class="sk-cube sk-cube7"></div>
-                <div class="sk-cube sk-cube8"></div>
-                <div class="sk-cube sk-cube9"></div>
-            </div>
+            <img src="images/preloader.gif">
         </div>
     </div>
     <!--
@@ -129,6 +123,7 @@
                     <li class="nav-text current"><a href="/events">Events</a></li>
                     <li class="nav-text"><a href="/gallery">Gallery</a></li>
                     <li class="nav-text"><a href="/team">Team</a></li>
+                    <li class="nav-text"><a href="/ca">Campus Ambassador</a></li>
                     <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -142,34 +137,9 @@
 Welcome Slider
 ==================================== -->
 
-    <section class="hero-area parallax-section">
+    <section class="landing parallax-section">
         <!-- <div class="block">  -->
-        <div class="main-container">
-            <div><img src="images/logo.png">
-                <h1 style="margin-left:20%">Xtasy-2k18</h1>
-            </div>
-            <!-- <div id="clockdiv">
-                <div>
-                    <span class="days"></span>
-                    <div class="smalltext">Days</div>
-                </div>
-                <div>
-                    <span class="hours"></span>
-                    <div class="smalltext">Hours</div>
-                </div>
-                <div>
-                    <span class="minutes"></span>
-                    <div class="smalltext">Minutes</div>
-                </div>
-                <div>
-                    <span class="seconds"></span>
-                    <div class="smalltext">Seconds</div>
-                </div>
-            </div> -->
-        </div>
 
-
-        <!-- </div> -->
     </section>
 
 
@@ -186,7 +156,7 @@ Welcome Slider
                     <div class="content-block">
                         <!-- section title -->
                         <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
-                            <h2>About <span class="color">US</span> </h2>
+                            <h2>About <span class="color">Us</span> </h2>
                             <div class="border"></div>
                         </div>
                         <div class="row">
@@ -311,7 +281,7 @@ Welcome Slider
         </div>
         <!-- /section title -->
 
-        
+
         <!-- Event container -->
         <a href="/events" data-toggle="tooltip" data-placement="auto" title="click to view events">
             <div class="wrap">
@@ -363,7 +333,7 @@ Welcome Slider
 
             <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
                 <div class="post-block">
-                    <div id="gallery-post" class="media-wrapper" style="border-radius:25px;">
+                    <div id="gallery-post" class="media-wrapper">
                         <div class="item">
                             <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
@@ -380,7 +350,7 @@ Welcome Slider
             </article>
             <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
                 <div class="post-block">
-                    <div id="gallery-post" class="media-wrapper" style="border-radius:25px;">
+                    <div id="gallery-post" class="media-wrapper">
                         <div class="item">
                             <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
@@ -397,7 +367,7 @@ Welcome Slider
             </article>
             <article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
                 <div class="post-block">
-                    <div id="gallery-post" class="media-wrapper" style="border-radius:25px;">
+                    <div id="gallery-post" class="media-wrapper">
                         <div class="item">
                             <img src="images/blog/blog-post-2.jpg" alt="blog post" class="img-responsive">
                         </div>
@@ -440,27 +410,28 @@ Welcome Slider
                 <!-- Contact Details -->
                 <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
                     <h3>Contact Details</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
-                    <div class="contact-details">
-                        <div class="con-info clearfix">
-                            <i class="tf-map-pin"></i>
-                            <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
-                        </div>
+                    <font size="3">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
+                        <div class="contact-details">
+                            <div class="con-info clearfix">
+                                <i class="tf-map-pin"></i>
+                                <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+                            </div>
 
-                        <div class="con-info clearfix">
-                            <i class="tf-ion-ios-telephone-outline"></i>
-                            <span>Phone: +880-31-000-000</span>
-                        </div>
+                            <div class="con-info clearfix">
+                                <i class="tf-ion-ios-telephone-outline"></i>
+                                <span>Phone: +880-31-000-000</span>
+                            </div>
 
-                        <div class="con-info clearfix">
-                            <i class="tf-ion-iphone"></i>
-                            <span>Fax: +880-31-000-000</span>
-                        </div>
+                            <div class="con-info clearfix">
+                                <i class="tf-ion-iphone"></i>
+                                <span>Fax: +880-31-000-000</span>
+                            </div>
 
-                        <div class="con-info clearfix">
-                            <i class="tf-ion-ios-email-outline"></i>
-                            <span>Email: hello@meghna.com</span>
-                        </div>
+                            <div class="con-info clearfix">
+                                <i class="tf-ion-ios-email-outline"></i>
+                                <span>Email: hello@meghna.com</span></font>
+                    </div>
                     </div>
                 </div>
                 <!-- / End Contact Details -->
@@ -507,9 +478,10 @@ Welcome Slider
         <!-- end container -->
 
         <!-- Google Map -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.575418479405!2d85.77365031442214!3d20.27643608641061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7f9d486f7c3%3A0xde71ead59307dcca!2sCollege+of+Engineering+And+Technology!5e0!3m2!1sen!2sin!4v1518210880783" width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.575418479405!2d85.77365031442214!3d20.27643608641061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7f9d486f7c3%3A0xde71ead59307dcca!2sCollege+of+Engineering+And+Technology!5e0!3m2!1sen!2sin!4v1518210880783"
+            width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        
+
         <!-- /Google Map -->
 
     </section>
@@ -536,7 +508,11 @@ Welcome Slider
                         </ul>
                     </div>
                     <!--/. End Footer Social Links -->
+
                     <p style="text-align: center; color: ##a09e9e;"><span id="foot">Made with love : ZAIRZA</span><p>
+                    <p style="text-align: center; color: ##a09e9e;"><span id="foot">Made with love : ZAIRZA</span>
+                        <p>
+
 
 
                 </div>
@@ -549,7 +525,7 @@ Welcome Slider
     <!-- end footer -->
 
     <div id="scroll-up">
-        
+
     </div>
 
     <!-- Main jQuery -->

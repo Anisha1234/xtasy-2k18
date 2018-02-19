@@ -87,6 +87,7 @@ li {
     transition: .5s ease;
     bottom: 0;
     height: 100%;
+    cursor: pointer;
 }
 
 .text {

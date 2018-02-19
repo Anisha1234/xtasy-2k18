@@ -9,7 +9,7 @@
 <head>
     <%- include ../partials/_head %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Dashboard</title>
+        <title>Profile</title>
 
         <!-- Mobile Specific Meta
 		================================================== -->
@@ -88,6 +88,7 @@
                     <li class="nav-text"><a href="/events">Events</a></li>
                     <li class="nav-text"><a href="/gallery">Gallery</a></li>
                     <li class="nav-text"><a href="/team">Team</a></li>
+                    <li class="nav-text"><a href="/ca">Campus Ambassador</a></li>
                     <li class="nav-text active current"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -160,6 +161,14 @@
                     </div>
                     <div class="col-md-7 dash-text">
                         <%= details.college %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>Accomodation</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.accomodation %>
                     </div>
                 </div>
             </div>

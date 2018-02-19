@@ -23,7 +23,8 @@ var userAuthenticate = function(req,res) {
               "college" : doc.college,
               "xtasyid" : "xtasy" + doc.xtasyid,
               "gender" : doc.gender ,
-              "contact" : doc.contact
+              "contact" : doc.contact,
+              "accomodation" : doc.accomodation
             };
             req.session.user = details;
             res.json({"msg": "successful"});

@@ -26,10 +26,10 @@ var passwordReset = function (req,res) {
               // Store hash in your password DB.
                 var link = req.protocol + '://' + req.get('host') + '/api/reset?email=' + req.body.emailid +'&code=' + hash;
                 var mail = {
-                from:  "xtasy <3" + ' <ramakpatt@gmail.com>'  ,
+                from:  "xtasy" + ' <ramakpatt@gmail.com>'  ,
                 to: req.body.emailid,
                 subject: "Reset password mail" ,
-                html: "<p>" + "Click on the below link to reset your password "+ link + "</p>"
+                html: "<p>" + "Click on the <a href='" + link + "'>link</a> to reset your password</p>"
             }
 
            transport.sendMail(mail, (error, response) => {
