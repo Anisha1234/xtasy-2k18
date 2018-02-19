@@ -36,6 +36,7 @@ font-family: 'Monoton', cursive;
 @import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
 @import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 /*@font-face {
     font-family: audrey;
@@ -481,7 +482,8 @@ a:hover {
 ====================================================================*/
 
 .title {
-    padding-bottom: 60px;
+
+    padding-bottom: 20px;
 }
 
 .title h2 {
@@ -654,7 +656,7 @@ a:hover {
 }
 
 .landing {
-    background-image: url("../images/backgrounds/main_background.jpg");
+    background-image: url("../images/backgrounds/villains1.jpg");
     /* opacity: 0.1%; */
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -2322,7 +2324,7 @@ font-family: 'Monoton', cursive;
 
 .nav-text {
     font-size: 20px;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'raleway', sans-serif;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -2478,3 +2480,14 @@ navbar-inverse .navbar-brand {
     margin-right: 5px;
     margin-bottom: 5px;
 }
+#logodiv 
+{
+    margin:auto ;
+    display: block;
+    padding: 10%;
+}
+img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }

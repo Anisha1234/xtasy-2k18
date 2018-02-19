@@ -12,9 +12,10 @@ font-family: 'Cantora One', sans-serif;
 */
 @import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
 @import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
 body {
-    font-family: 'Jockey One', sans-serif;
+    font-family:lato;
     font-size: 20px;
     font-weight: 300;
     color: #888;
@@ -32,7 +33,7 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Playfair Display';
     color: #afbac4;
 }
 
@@ -172,7 +173,7 @@ p {
 
 .nav-text {
     font-size: 20px !important;
-    font-family: 'Philosopher', sans-serif !important;
+    font-family: 'Raleway' !important;
 }
 
 .navbar-inverse .navbar-nav>li>a {
