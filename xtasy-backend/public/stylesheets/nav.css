@@ -14,10 +14,11 @@ font-family: 'Cantora One', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
+
 body {
-    font-family:lato;
+    font-family: 'Lato';
     font-size: 20px;
-    font-weight: 300;
+    font-weight: bold;
     color: #888;
     line-height: 30px;
     text-align: center;
