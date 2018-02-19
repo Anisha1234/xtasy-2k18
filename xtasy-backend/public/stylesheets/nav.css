@@ -12,11 +12,15 @@ font-family: 'Cantora One', sans-serif;
 */
 @import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
 @import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Sanchez');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 
 body {
-    font-family: 'Jockey One', sans-serif;
+    font-family: 'Lato';
     font-size: 20px;
-    font-weight: 300;
+    font-weight: bold;
     color: #888;
     line-height: 30px;
     text-align: center;

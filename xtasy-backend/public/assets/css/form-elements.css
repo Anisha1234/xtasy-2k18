@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=One|Jockey+One|Oleo+Script|Open+Sans:600|Philosopher:700i|Righteous');
 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 input[type="text"],
 input[type="password"],
 textarea,
@@ -10,13 +10,14 @@ textarea.form-control {
     vertical-align: middle;
     background: transparent;
     border:none;
+    
     border-bottom: 1px solid #fff;
-    font-family: 'Jockey One', sans-serif;
+    font-family: 'Josefin sans';
     font-size: 18px;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 50px;
     color:#fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
@@ -25,15 +26,18 @@ textarea.form-control {
     background: transparent;
     border:none;
     border-bottom: 1px solid #fff;
-    font-family: 'Jockey One', sans-serif;
+    font-family: 'Josefin sans';
     font-size: 18px;
-    font-weight: 300;
+
+    font-weight: normal;
     line-height: 50px;
     color:#fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
+
+
 
 textarea,
 textarea.form-control {
