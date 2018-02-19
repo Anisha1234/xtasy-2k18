@@ -49,16 +49,15 @@
                 -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
             }
-            input{
-                font-size:5px;
+            
+            input {
+                font-size: 5px;
             }
         </style>
         <script>
-        
-        window.onload = function() {
-            document.getElementById('preloader').style.display = 'none';
-        }
-
+            window.onload = function() {
+                document.getElementById('preloader').style.display = 'none';
+            }
         </script>
 
 </head>
@@ -101,6 +100,7 @@
                     <li class="nav-text"><a href="/events">Events</a></li>
                     <li class="nav-text"><a href="/gallery">Gallery</a></li>
                     <li class="nav-text"><a href="/team">Team</a></li>
+                    <li class="nav-text"><a href="/ca">Campus Ambassador</a></li>
                     <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -150,54 +150,54 @@
                                         <span><i class="fa fa-lock"></i></span>
                                         <input type="password" name="form-password" placeholder="Password" class="form-password form-control" id="password" required>
                                     </div>
-                                    <a href="/forgot" style="left:0" >Forgot Password?</a>
+                                    <a href="/forgot" style="left:0">Forgot Password?</a>
                                     <input type="submit" name="submit" value="Login" class="button" />
                                 </form>
-			                </div>
+                            </div>
                         </div>
                     </div>
 
-                        <div class="col-sm-1 middle-border"></div>
-                        <div class="col-sm-1"></div>
+                    <div class="col-sm-1 middle-border"></div>
+                    <div class="col-sm-1"></div>
 
-                        <div class="col-sm-5">
+                    <div class="col-sm-5">
 
-                        	<div class="form-box">
-                        		<div class="form-top">
-	                        		<div class="form-top-left">
-	                        			<h3>Sign up now</h3>
+                        <div class="form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>Sign up now</h3>
 
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fa fa-pencil"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-				                    <form id="regform" action='api/register' method="post" class="registration-form">
-                                        <div class="form-group">
-                                            <label  for="form-name">Name</label>
-                                            <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="form-name">Email</label>
-                                            <input name="emailid" type="text" class="form-control" placeholder="Email" id="emailid2" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="phone number">Phone Number</label>
-                                            <input name="contact" type="text" class="form-control input-lg" placeholder="Phone No" id="contact" required>
-                                        </div>
-                                        <div class="form-group" >
-                                            <label for="Gender">Gender</label>
-                                            <select type="text" class="form-control input-lg" id="gender" name="gender" >
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-pencil"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form id="regform" action='api/register' method="post" class="registration-form">
+                                    <div class="form-group">
+                                        <label for="form-name">Name</label>
+                                        <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-name">Email</label>
+                                        <input name="emailid" type="text" class="form-control" placeholder="Email" id="emailid2" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone number">Phone Number</label>
+                                        <input name="contact" type="text" class="form-control input-lg" placeholder="Phone No" id="contact" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Gender">Gender</label>
+                                        <select type="text" class="form-control input-lg" id="gender" name="gender">
                                                 <option value="Male" style="color:black;">Male</option>
                                                 <option value="Female" style="color:black;">Female</option>
                                             </select>
-                                        </div>
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="College Name">College</label>
-                                            <input name="college" type="text" class="form-control" placeholder="College" id="college" required>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="College Name">College</label>
+                                        <input name="college" type="text" class="form-control" placeholder="College" id="college" required>
+                                    </div>
 
                                         <div class="form-group">
                                             <label for="College Name">Accomodation Required?</label>
@@ -209,25 +209,25 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <div class="input-group pb-modalreglog-input-group">
-                                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                        <input name="password" type="password" class="form-control" id="password2" placeholder="Password" required>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <div class="input-group pb-modalreglog-input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                            <input name="password" type="password" class="form-control" id="password2" placeholder="Password" required>
+                                        </div>
                                     </div>
+                                    <div class="g-recaptcha" data-sitekey="6LflXkEUAAAAAO1UTbxrb01mKe8j9SaAlJg5ns0H"></div>
+                                    <audio id="sound1" src="assets/audio/login_audio.mp3" preload="auto"></audio>
+                                    <button type="submit" class="button">Submit</button>
+                                </form>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6LflXkEUAAAAAO1UTbxrb01mKe8j9SaAlJg5ns0H"></div>
-                            <audio id="sound1" src="assets/audio/login_audio.mp3" preload="auto"></audio>
-                            <button type="submit" class="button">Submit</button>
-                            </form>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
     </div>
 
