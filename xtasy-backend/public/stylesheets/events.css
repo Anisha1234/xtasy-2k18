@@ -67,7 +67,7 @@ li {
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: #fc1606;
+    background-color: rgba(239, 18, 2, 0.4);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -80,7 +80,7 @@ li {
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: #fc1606e8;
+    background-color: rgba(239, 18, 2, 0.4);
     overflow: hidden;
     width: 100%;
     height: 0;
