@@ -1306,7 +1306,7 @@ a:hover {
     margin-top: 4%;
 }
 
-.team-member:hover .mask {
+.team-member .mask {
     cursor: pointer;
     opacity: 1;
     filter: alpha(opacity=100);
