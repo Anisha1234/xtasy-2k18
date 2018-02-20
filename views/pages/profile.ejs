@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" style="background-color: aliceblue; overflow-x:hidden;">
+<!--<![endif]-->
+
+<head>
+    <%- include ../partials/_head %>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Profile</title>
+
+        <!-- Mobile Specific Meta
+		================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
+        <script>
+            window.onload = function() {
+                document.getElementById('preloader').style.display = 'none';
+            }
+        </script>
+        <style>
+            .dash-text {
+                color: rgb(3, 3, 3);
+                font-family: 'Vast Shadow', cursive;
+                font-size: 20px;
+            }
+            
+            .container {
+                text-align: center;
+            }
+            
+            .row {
+                padding: 10px;
+            }
+            
+            a {
+                cursor: pointer;
+            }
+            
+            body {
+                background-color: aliceblue;
+            }
+        </style>
+</head>
+
+<body>
+    <!--
+	    Start Preloader
+	    ==================================== -->
+    <div id="preloader">
+        <div class="preloader">
+            <img src="images/preloader.gif">
+        </div>
+    </div>
+    <!--
+            End Preloader
+            ==================================== -->
+
+
+    <!--
+        Navbar
+        ==================================== -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">XTASY 2K18</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-text"><a href="/events">Events</a></li>
+                    <li class="nav-text"><a href="/gallery">Gallery</a></li>
+                    <li class="nav-text"><a href="/team">Team</a></li>
+                    <li class="nav-text"><a href="/ca">Campus Ambassador</a></li>
+                    <li class="nav-text active current"><a href="/profile">Profile</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-text"><a id="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of nav-bar -->
+    <div>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <!-- Page title -->
+    <div class="title text-center">
+        <h2>
+            <span class="color">Xtasy: Get Ready for Action</span>
+        </h2>
+        <div class="border"></div>
+    </div>
+
+    <!-- Main Body
+    ===================================-->
+    <div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 container">
+                <div id="qrcode" width="176" height="176"></div>
+                <p>
+                    <%= details.xtasyid %>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>Name</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.name %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>Email Id</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.emailid %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>Phone No.</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.contact %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>Gender</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.gender %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>College</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.college %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 dash-text">
+                        <b>Accomodation</b>
+                    </div>
+                    <div class="col-md-7 dash-text">
+                        <%= details.accomodation %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="container">
+            <button id="btx" type="button" class="btn btn-group-lg btn-danger">Print</button>
+        </div>
+    </div>
+
+    <script src="./javascripts/jquery.qrcode.js" type="text/javascript"></script>
+    <script src="./javascripts/qrcode.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            var xtasyid = <%- JSON.stringify(details.xtasyid) %>;
+            console.log(xtasyid.slice(5));
+            xtasyid = (((Number(xtasyid.slice(5)) * 300) - 20) / 4) + 7 ;
+            console.log(xtasyid)
+            $('#qrcode').qrcode(xtasyid.toString());
+            $('#btx').click(function() {
+                window.print();
+            })
+        });
+    </script>
+    <script src="./javascripts/logout.js"></script>
+</body>
+
+</html>

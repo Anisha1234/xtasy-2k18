@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Admin</title>
+    <!-- Mobile Specific Meta
+              ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+      ================================================== -->
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/admin.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/img/backgrounds/favicon.png">
+    <script>
+        window.onload = function() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+    </script>
+    <%- include ../partials/_head %>
+        <style>
+            #logout {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+</head>
+
+<body>
+    <!-- Page title -->
+    <div class="title text-center">
+        <h2><span class="color" id="element">Admin</span></h2>
+        <div class="border"></div>
+    </div>
+
+    <!--
+	    Start Preloader
+	    ==================================== -->
+    <div id="preloader">
+        <div class="preloader">
+            <img src="images/preloader.gif">
+        </div>
+    </div>
+    <!--
+            End Preloader
+            ==================================== -->
+
+
+    <button id="logout" class="btn btn-danger">Log Out</button>
+    <div style=" width:97%; margin:auto; overflow-x:auto;">
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th>Xtasy ID</th>
+                    <th>NAME</th>
+                    <th>EMAIL ID</th>
+                    <th>PHONE NO.</th>
+                    <th>COLLEGE</th>
+                    <th>ACCOMODATION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < users.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= users[i].xtasyid %>
+                        </td>
+                        <td>
+                            <%= users[i].name %>
+                        </td>
+                        <td>
+                            <%= users[i].emailid %>
+                        </td>
+                        <td>
+                            <%= users[i].contact %>
+                        </td>
+                        <td>
+                            <%= users[i].college %>
+                        </td>
+                        <td>
+                            <%= users[i].accomodation %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <div class="container" style="text-align:center;">
+            <button id="btx" type="button" class="btn btn-group-lg btn-danger">Print</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#btx').click(function() {
+                window.print();
+            })
+        });
+    </script>
+    <script src="./javascripts/logout.js"></script>
+    <script src="./javascripts/admin.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
+</body>
+
+</html>
