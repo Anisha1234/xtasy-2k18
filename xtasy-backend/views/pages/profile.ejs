@@ -183,8 +183,10 @@
     <script>
         $(document).ready(function() {
             var xtasyid = <%- JSON.stringify(details.xtasyid) %>;
-            console.log(xtasyid);
-            $('#qrcode').qrcode(xtasyid);
+            console.log(xtasyid.slice(5));
+            xtasyid = (((Number(xtasyid.slice(5)) * 300) - 20) / 4) + 7 ;
+            console.log(xtasyid)
+            $('#qrcode').qrcode(xtasyid.toString());
             $('#btx').click(function() {
                 window.print();
             })

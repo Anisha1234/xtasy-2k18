@@ -3,10 +3,11 @@ const UserModel = require('../models/user');
 
 var findId = function (req, res) {
   if (req.query.xtasyid) {
-    var xtasyid = req.query.xtasyid.slice(-4);
+    var xtasyid = Number(req.query.xtasyid);
+    xtasyid = (((((xtasyid/300)-2)/7)+7)/30) - 5 ;
     console.log(xtasyid);
     UserModel.findOne({
-      "xtasyid": xtasyid
+      "xtasyid": xtasyid.toString()
     }, function (err, doc) {
       if (err) throw err;
       if (!doc) res.send("invalid xtasyid");
