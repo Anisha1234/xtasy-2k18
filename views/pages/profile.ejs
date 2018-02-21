@@ -71,7 +71,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>                        
                 </button>
-                <a class="navbar-brand" href="/">XTASY 2K18</a>
+                <a class="navbar-brand nav-logo" href="/"><img src="../images/logonav.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -175,7 +175,7 @@
         $(document).ready(function() {
             var xtasyid = <%- JSON.stringify(details.xtasyid) %>;
             console.log(xtasyid.slice(5));
-            xtasyid = (((Number(xtasyid.slice(5)) * 300) - 20) / 4) + 7 ;
+            xtasyid = (((Number(xtasyid.slice(5)) * 300) - 20) / 4) + 7;
             console.log(xtasyid)
             $('#qrcode').qrcode(xtasyid.toString());
             $('#btx').click(function() {
