@@ -50,7 +50,7 @@ var createUser = function (req, res) {
                         // Store hash in your password DB.
                         var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid + '&code=' + hash;
                         var mail = {
-                            from: "xtasy" + ' <ramakpatt@gmail.com>',
+                            from: "xtasy" + ' <xtasy.2018@gmail.com>',
                             to: newUser.emailid,
                             subject: "Verification mail",
                             html: "<p>" + "Click on the <a style='color:red;' href = " + link + " >link</a> to verify.</p>"

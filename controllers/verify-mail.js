@@ -24,7 +24,7 @@ var verifyMail = function (req, res) {
         if (err) throw err;
         if (!doc) res.redirect("/login?action=2");
         var mail = {
-          from: "xtasy" + '<ramakpatt@gmail.com>',
+          from: "xtasy" + '<xtasy.2018@gmail.com>',
           to: doc.emailid,
           subject: "Confirmation Mail",
           html: "<p>You have been successfully verified</p><br><br>" + 
