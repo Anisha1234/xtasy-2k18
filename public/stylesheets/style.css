@@ -1329,6 +1329,10 @@ a:hover {
     .member-photo {
         text-align: center;
     }
+    .team-box {
+    margin: 0 0 10% 0;
+}
+
 }
 
 .member-photo:hover img {
@@ -1425,9 +1429,10 @@ a:hover {
     margin: 0 0 5px;
 }
 
-.member-meta span {
-    font-size: 12px;
+.member-meta h5 {
+    font-size: 16px;
     color: #fff;
+
 }
 
 

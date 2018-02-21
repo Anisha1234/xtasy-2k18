@@ -8,8 +8,8 @@ var options = {
     service: 'gmail',
     secure: true,
     auth: {
-        user: 'ramakpatt@gmail.com',
-        pass: 'edtgh67ifr'
+        user: 'xtasy.2018@gmail.com',
+        pass: 'CeTjInDaBaD2018'
     }
 };
 

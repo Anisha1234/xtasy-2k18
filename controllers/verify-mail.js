@@ -8,8 +8,8 @@ var options = {
   service: 'gmail',
   secure: true,
   auth: {
-    user: 'ramakpatt@gmail.com',
-    pass: 'edtgh67ifr'
+    user: 'xtasy.2018@gmail.com',
+    pass: 'CeTjInDaBaD2018'
   }
 };
 
@@ -26,7 +26,7 @@ var verifyMail = function (req, res) {
         var mail = {
           from: "xtasy" + '<ramakpatt@gmail.com>',
           to: doc.emailid,
-          subject: "Verification Mail",
+          subject: "Confirmation Mail",
           html: "<p>You have been successfully verified</p><br><br>" + 
                 "<table><tr><th>Name:</th><td>" + doc.name + "</td></tr>" + 
                 "<tr><th>XtasyID:</th><td>" + doc.xtasyid + "</td></tr>" + 
