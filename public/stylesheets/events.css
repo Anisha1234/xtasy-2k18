@@ -112,6 +112,13 @@ li {
     text-shadow: 1px 1px 3px #000;
 }
 
+hr {
+    height: 1px;
+    color: rgba(110, 110, 110, 0.685);
+    background-color: rgba(110, 110, 110, 0.678);
+    border: none;
+}
+
 @media screen and (max-device-width: 500px) {
     .modal-dialog {
         overflow-y: initial !important;
