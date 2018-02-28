@@ -50,4 +50,7 @@ $(document).ready(function() {
     $("#myBtn49").click(function() { $("#myModal49").modal(); });
     $("#myBtn50").click(function() { $("#myModal50").modal(); });
     $("#myBtn51").click(function() { $("#myModal51").modal(); });
+    $("#myBtn53").click(function() { $("#myModal53").modal(); });
+    $("#myBtn54").click(function() { $("#myModal54").modal(); });
+    $("#myBtn55").click(function() { $("#myModal55").modal(); });
 });
