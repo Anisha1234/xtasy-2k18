@@ -17,6 +17,8 @@ var reset = require("../controllers/resetpassword");
 
 var change = require("../controllers/changepassword");
 
+var getUsers = require("../controllers/getallusers");
+
 
 router.get("/" , function(req,res){
     res.json({"msg" : "hello world"})
@@ -37,6 +39,12 @@ router.get("/reset" , reset.verifyReset);
 router.get("/find", find.findId);
 
 router.post("/change", change.changePassword);
+
+router.get("/getallusers" , function(req,res){
+    res.send("Security key missing");
+});
+
+router.get("/getallusers/:key", getUsers.getAllUsers)
 
 
 module.exports = router;

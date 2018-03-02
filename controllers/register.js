@@ -1,19 +1,9 @@
 var mongoose = require('mongoose');
 var request = require('request');
-var mailer = require("nodemailer");
-var smtpTransport = require('nodemailer-smtp-transport');
+const sgMail = require('@sendgrid/mail');
 var bcrypt = require('bcrypt');
 
-var options = {
-    service: 'gmail',
-    secure: true,
-    auth: {
-        user: 'xtasy.2018@gmail.com',
-        pass: 'CeTjInDaBaD2018'
-    }
-};
-
-var transport = mailer.createTransport(smtpTransport(options));
+sgMail.setApiKey("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");
 
 var UserModel = require('../models/user');
 
@@ -50,30 +40,32 @@ var createUser = function (req, res) {
                         // Store hash in your password DB.
                         var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid + '&code=' + hash;
                         var mail = {
-                            from: "xtasy" + ' <xtasy.2018@gmail.com>',
+                            from: 'noreply@xtasy.cetb.in',
                             to: newUser.emailid,
-                            subject: "Verification mail",
-                            html: "<p>" + "Click on the <a style='color:red;' href = " + link + " >link</a> to verify.</p>"
-                        }
+                            subject: "Welcome to xtasy! Confirm your email" ,
+                            text:"Hello " + newUser.name + "!You are just one step away from registering to xtasy."+
+                                 "Click on the [link](" + link + ") to verify." + 
+                                 "You are receiving this mail because you or someone posing as you is" + 
+                                 " trying to register for xtasy",
+                            html: "<b>Hello " + newUser.name +
+                            "!</b><br><br>You are just one step away from registering to xtasy." + 
+                            "<p>" + "Click on the <a style='color:red;' href = " + link + " >link</a> to verify.</p><br>" + 
+                            "<small>You are receiving this mail because you or someone posing as you is" + 
+                            " trying to register for xtasy</small>"
+                        };
+                        console.log("mail generated");
+                        sgMail.send(mail, function () {
+                            console.log("Hry");
+                            UserModel.saveUser(newUser, function (err, doc) {
+                                if (err) throw err;
+                                console.log(doc);
 
-                        transport.sendMail(mail, (error, response) => {
-                            transport.close()
-                            if (error) {
-                                console.log(error);
-                                res.json({ "msg": 'Error in sending mail! Please register again' });
-                            } else {
-                                UserModel.saveUser(newUser, function (err, doc) {
-                                    if (err) throw err;
-                                    console.log(doc);
+                                console.log("Mail has been sent")
+                                res.json({ "msg": 'A mail has been sent to you for verification. Please check spams too' });
 
-                                    console.log("Mail has been sent")
-                                    res.json({ "msg": 'A mail has been sent to you for verification' });
-
-                                    // res.json(doc);
-                                });
-
-                            }
-                        })
+                                // res.json(doc);
+                            });
+                        });
 
                     });
                 });
