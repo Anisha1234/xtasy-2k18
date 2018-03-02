@@ -47,4 +47,8 @@ router.get("/ca", function(req, res, next) {
     res.render("./pages/ca");
 });
 
+router.get("/sponsors", function(req, res, next) {
+    res.render("./pages/sponsors");
+});
+
 module.exports = router;

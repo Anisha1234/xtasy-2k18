@@ -1335,7 +1335,7 @@ a:hover {
 
 }
 
-.member-photo:hover img {
+.:hover img {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -2503,4 +2503,16 @@ img-responsive {
         width: 100%;
         padding-top: 50%;
     }
+}
+
+.sponsor-photo {
+    overflow: hidden;
+    position: relative;
+}
+@media screen and (max-width: 768px) {
+    .sponsors-photo {
+        text-align: center;
+    }
+    .team-box {
+    margin: 0 0 10% 0;
 }
