@@ -36,9 +36,10 @@ h1, h2 {
 
 h3 {
 	font-size: 22px;
-    font-weight: 300;
-    color: #555;
-    line-height: 30px;
+    font-weight: 1000!important;
+    color: #fff !important;
+	line-height: 30px;
+	text-align: center;
 }
 
 img { max-width: 100%; }
