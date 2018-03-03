@@ -73,7 +73,7 @@ var createUser = function (req, res) {
                                     console.log(doc);
 
                                     console.log("Mail has been sent")
-                                    res.json({ "msg": 'A mail has been sent to you for verification' });
+                                    res.json({ "msg": 'Successfully Registered!' });
 
                                     // res.json(doc);
                                 });

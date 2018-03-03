@@ -10,7 +10,7 @@ var changePassword = function (req,res) {
           console.log(hash)
           //if(!doc) res.redirect("/login?action=2") // res.send("invalid mail");
           //else res.redirect("/login?action=1")
-          res.json({"msg" : "successful"})
+          res.json({"msg" : "Successfully Changed Password"})
         } );
 
       })
