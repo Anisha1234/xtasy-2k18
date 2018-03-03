@@ -1,9 +1,19 @@
 var mongoose = require('mongoose');
 var request = require('request');
-const sgMail = require('@sendgrid/mail');
+var mailer = require("nodemailer");
+var smtpTransport = require('nodemailer-smtp-transport');
 var bcrypt = require('bcrypt');
 
-sgMail.setApiKey("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");
+var options = {
+    service: 'gmail',
+    secure: true,
+    auth: {
+        user: 'xtasy.2018@gmail.com',
+        pass: 'CeTjInDaBaD2018'
+    }
+};
+
+var transport = mailer.createTransport(smtpTransport(options));
 
 var UserModel = require('../models/user');
 
@@ -38,34 +48,38 @@ var createUser = function (req, res) {
                 bcrypt.genSalt(10, function (err, salt) {
                     bcrypt.hash(newUser.emailid, salt, function (err, hash) {
                         // Store hash in your password DB.
-                        var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid + '&code=' + hash;
+                        var link = req.protocol + '://' + req.get('host') + '/login';
                         var mail = {
                             from: 'noreply@xtasy.cetb.in',
                             to: newUser.emailid,
-                            subject: "Welcome to xtasy! Confirm your email" ,
-                            text:"Hello " + newUser.name + "!You are just one step away from registering to xtasy."+
-                                 "Click on the [link](" + link + ") to verify." + 
+                            subject: "Welcome to xtasy! Registration Confirmed!" ,
+                            text:"Hello " + newUser.name + "!You have successfully registered. Kindly [LOGIN](" + link + ") to the Xtasy website to get your QRCode."+ 
                                  "You are receiving this mail because you or someone posing as you is" + 
                                  " trying to register for xtasy",
                             html: "<b>Hello " + newUser.name +
-                            "!</b><br><br>You are just one step away from registering to xtasy." + 
-                            "<p>" + "Click on the <a style='color:red;' href = " + link + " >link</a> to verify.</p><br>" + 
-                            "<small>You are receiving this mail because you or someone posing as you is" + 
+                            "!</b><br><br>You have successfully registered. Kindly <a href=" + link + " style='color:red;'>LOGIN</a> to the Xtasy website to get your QRCode." + "<br>" + 
+                            "<br><small>You are receiving this mail because you or someone posing as you is" + 
                             " trying to register for xtasy</small>"
                         };
-                        console.log("mail generated");
-                        sgMail.send(mail, function () {
-                            console.log("Hry");
-                            UserModel.saveUser(newUser, function (err, doc) {
-                                if (err) throw err;
-                                console.log(doc);
 
-                                console.log("Mail has been sent")
-                                res.json({ "msg": 'A mail has been sent to you for verification. Please check spams too' });
+                        transport.sendMail(mail, (error, response) => {
+                            transport.close()
+                            if (error) {
+                                console.log(error);
+                                res.json({ "msg": 'Error in sending mail! Please register again' });
+                            } else {
+                                UserModel.saveUser(newUser, function (err, doc) {
+                                    if (err) throw err;
+                                    console.log(doc);
 
-                                // res.json(doc);
-                            });
-                        });
+                                    console.log("Mail has been sent")
+                                    res.json({ "msg": 'A mail has been sent to you for verification' });
+
+                                    // res.json(doc);
+                                });
+
+                            }
+                        })
 
                     });
                 });

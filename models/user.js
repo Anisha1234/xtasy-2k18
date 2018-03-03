@@ -17,7 +17,7 @@ var userSchema = new Schema({
     contact : { type : String , required : true},
     gender : { type : String , required : true},
     accomodation: {type : String, required: true, enum: [ "yes", "no" ], default: "no" },
-    isVerified : { type: Boolean, default: false }
+    isVerified : { type: Boolean, default: true }
 });
 
 userSchema.plugin(autoIncrement.plugin, {
