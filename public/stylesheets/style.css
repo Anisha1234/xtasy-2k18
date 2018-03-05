@@ -2425,27 +2425,27 @@ navbar-inverse .navbar-brand {
     animation: rotate 20s infinite linear;
 }
 
-.wrap:hover .front {
+.cube:hover .front {
     transform: translateZ(150px);
 }
 
-.wrap:hover .back {
+.cube:hover .back {
     transform: translateZ(-200px) rotateY(180deg);
 }
 
-.wrap:hover .right {
+.cube:hover .right {
     transform: rotateY(-270deg) translateZ(100px) translateX(100px);
 }
 
-.wrap:hover .left {
+.cube:hover .left {
     transform: rotateY(270deg) translateZ(100px) translateX(-100px);
 }
 
-.wrap:hover .top {
+.cube:hover .top {
     transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
 }
 
-.wrap:hover .bottom {
+.cube:hover .bottom {
     transform: rotateX(270deg) translateZ(100px) translateY(100px);
 }
 
@@ -2463,7 +2463,7 @@ navbar-inverse .navbar-brand {
     .front {
         transform: translateZ(120px);
     }
-    .wrap:hover .front {
+    .cube:hover .front {
         transform: translateZ(200px);
     }
 }
@@ -2530,3 +2530,31 @@ img-responsive {
 
 
 
+#floating-button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #db4437;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #666;
+  }
+  
+  .brochure{
+    color: white;
+    /* position: center; */
+    top: 0;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .brochure:hover{
+      color: rgb(129, 168, 151);
+  }
