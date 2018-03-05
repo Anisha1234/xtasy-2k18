@@ -29,11 +29,11 @@ var userAuthenticate = function(req,res) {
             req.session.user = details;
             res.json({"msg": "successful"});
           } else {
-            res.json({msg:"Invalid Password, Enter again"});
+            res.json({msg:"Invalid Password, Enter again!"});
           }
         });
       } else {
-        res.json({msg:"Either unverified or unregistered"});
+        res.json({msg:"EmailID Not Registered!"});
       }
     });
   }

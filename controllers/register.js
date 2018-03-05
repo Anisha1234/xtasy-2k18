@@ -1,19 +1,6 @@
 var mongoose = require('mongoose');
 var request = require('request');
-var mailer = require("nodemailer");
-var smtpTransport = require('nodemailer-smtp-transport');
 var bcrypt = require('bcrypt');
-
-var options = {
-    service: 'gmail',
-    secure: true,
-    auth: {
-        user: 'xtasy.2018@gmail.com',
-        pass: 'CeTjInDaBaD2018'
-    }
-};
-
-var transport = mailer.createTransport(smtpTransport(options));
 
 var UserModel = require('../models/user');
 
@@ -45,48 +32,17 @@ var createUser = function (req, res) {
 
                 //newUser.xtasyid
 
-                bcrypt.genSalt(10, function (err, salt) {
-                    bcrypt.hash(newUser.emailid, salt, function (err, hash) {
-                        // Store hash in your password DB.
-                        var link = req.protocol + '://' + req.get('host') + '/login';
-                        var mail = {
-                            from: 'noreply@xtasy.cetb.in',
-                            to: newUser.emailid,
-                            subject: "Welcome to xtasy! Registration Confirmed!" ,
-                            text:"Hello " + newUser.name + "!You have successfully registered. Kindly [LOGIN](" + link + ") to the Xtasy website to get your QRCode."+ 
-                                 "You are receiving this mail because you or someone posing as you is" + 
-                                 " trying to register for xtasy",
-                            html: "<b>Hello " + newUser.name +
-                            "!</b><br><br>You have successfully registered. Kindly <a href=" + link + " style='color:red;'>LOGIN</a> to the Xtasy website to get your QRCode." + "<br>" + 
-                            "<br><small>You are receiving this mail because you or someone posing as you is" + 
-                            " trying to register for xtasy</small>"
-                        };
+                UserModel.saveUser(newUser, function (err, doc) {
+                    if (err) throw err;
+                    console.log(doc);
+                    res.json({ "msg": 'Successfully Registered!' });
 
-                        transport.sendMail(mail, (error, response) => {
-                            transport.close()
-                            if (error) {
-                                console.log(error);
-                                res.json({ "msg": 'Error in sending mail! Please register again' });
-                            } else {
-                                UserModel.saveUser(newUser, function (err, doc) {
-                                    if (err) throw err;
-                                    console.log(doc);
-
-                                    console.log("Mail has been sent")
-                                    res.json({ "msg": 'Successfully Registered!' });
-
-                                    // res.json(doc);
-                                });
-
-                            }
-                        })
-
-                    });
+                    // res.json(doc);
                 });
 
             } else {
                 console.log("emailid already taken");
-                res.json({ "msg": "Already registered" });
+                res.json({ "msg": "EmailID Already Registered!" });
             }
         });
 
