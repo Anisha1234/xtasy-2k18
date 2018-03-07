@@ -1330,9 +1330,8 @@ a:hover {
         text-align: center;
     }
     .team-box {
-    margin: 0 0 10% 0;
-}
-
+        margin: 0 0 10% 0;
+    }
 }
 
 .member-photo :hover img {
@@ -1432,7 +1431,6 @@ a:hover {
 .member-meta h5 {
     font-size: 16px;
     color: #fff;
-
 }
 
 
@@ -2508,19 +2506,21 @@ img-responsive {
 .sponsor-photo {
     overflow: hidden;
     position: relative;
-    width: 40%; 
+    width: 40%;
     height: 40%;
     align-content: center;
     margin: auto;
 }
+
 @media screen and (max-width: 768px) {
     .sponsors-photo {
         text-align: center;
     }
     .team-box {
-    margin: 0 0 10% 0;
+        margin: 0 0 10% 0;
     }
 }
+
 .color-head {
     font-size: 25px;
     color: #fff;
@@ -2528,9 +2528,7 @@ img-responsive {
     margin-left: 20%;
 }
 
-
-
-#floating-button{
+#floating-button {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -2540,9 +2538,9 @@ img-responsive {
     right: 30px;
     cursor: pointer;
     box-shadow: 0px 2px 5px #666;
-  }
-  
-  .brochure{
+}
+
+.brochure {
     color: white;
     /* position: center; */
     top: 0;
@@ -2553,30 +2551,8 @@ img-responsive {
     text-align: center;
     padding: 0;
     margin: 0;
-  }
+}
 
-  .brochure:hover{
-      color: rgb(129, 168, 151);
-  }
-  .modal-content-1
-  {
-      font-size: 30px;
-      color: black;
-      text-align: center;
-      padding: 5%;
-        position: relative;
-        background-color:white;
-        width: 1000px;
-        height: 500px;
-        -webkit-background-clip: padding-box;
-                background-clip: padding-box;
-        border: 1px solid rgba(0, 0, 0, .2);
-        border: 1px solid rgba(0, 0, 0, .2);
-        border-radius: 6px;
-        outline: 0;
-        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-                box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-
-
-  }
- 
+.brochure:hover {
+    color: rgb(129, 168, 151);
+}
