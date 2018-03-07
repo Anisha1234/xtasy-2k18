@@ -2558,3 +2558,25 @@ img-responsive {
   .brochure:hover{
       color: rgb(129, 168, 151);
   }
+  .modal-content-1
+  {
+      font-size: 30px;
+      color: black;
+      text-align: center;
+      padding: 5%;
+        position: relative;
+        background-color:white;
+        width: 1000px;
+        height: 500px;
+        -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        outline: 0;
+        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+                box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+
+
+  }
+ 
