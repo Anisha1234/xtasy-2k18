@@ -36,18 +36,18 @@
         #content-box>ul>li>a {
             font-weight: 900;
         }
-        
+
         #content-box>ul>li>a:hover {
             color: black;
         }
-        
+
         #content-box {
             width: 80%;
             margin: auto;
             color: aliceblue;
             font-size: 20px;
         }
-        
+
         .content {
             margin: auto;
             height: auto;
@@ -55,17 +55,17 @@
             padding: 15px;
             font-family: 'Righteous', cursive;
         }
-        
+
         .btn {
             background-color: rgb(155, 0, 0);
             font-weight: 900;
         }
-        
+
         .btn:hover {
             color: white !important;
             background-color: rgb(255, 14, 14);
         }
-        
+
         ol>li {
             list-style-type: lower-alpha;
         }
@@ -83,7 +83,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
+                  <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"><img src="../images/logonav.png"></a>
             </div>
@@ -97,7 +97,12 @@
                     <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-text"><a href="/login">Login / Register</a></li>
+                    <% if(isLoggedIn) { %>
+                      <li class="nav-text"><a id="logout" style="cursor:pointer;">LogOut</a></li>
+                    <% } %>
+                    <% if(!isLoggedIn) {%>
+                      <li class="nav-text"><a href="/login">Login / Register</a></li>
+                    <% } %>
                 </ul>
             </div>
         </div>
@@ -179,9 +184,9 @@
         </div>
         <div id="floating-button">
             <a href="../brochure/Brochure.pdf" class="brochure"><i class="fa fa-book fa-1x"></i></a>
-        </div>    
+        </div>
 
-        <!-- 
+        <!--
             Essential Scripts
             =====================================-->
 
@@ -199,6 +204,7 @@
         <!--Background Animation-->
         <script src='plugins/particles.min.js'></script>
         <script src="javascripts/particle.js"></script>
+        <script src="./javascripts/logout.js"></script>
 </body>
 
 </html>

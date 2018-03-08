@@ -2,9 +2,16 @@ var express = require('express');
 var router = express.Router();
 var admin = require('../controllers/admin');
 
+
+var isLoggedIn = false;
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('./pages/index');
+    if(req.session.user){
+      isLoggedIn = true;
+    }
+    else isLoggedIn = false;
+    res.render('./pages/index', {"isLoggedIn" : isLoggedIn});
 });
 
 router.get("/login", function(req, res, next) {
@@ -32,23 +39,44 @@ router.get("/forgot", function(req, res, next) {
 });
 
 router.get("/events", function(req, res, next) {
-    res.render("./pages/events");
+  if(req.session.user){
+    isLoggedIn = true;
+  }
+  else isLoggedIn = false;
+    res.render("./pages/events", {"isLoggedIn" : isLoggedIn});
 });
 
 router.get("/gallery", function(req, res, next) {
-    res.render("./pages/gallery");
+  if(req.session.user){
+    isLoggedIn = true;
+  }
+  else isLoggedIn = false;
+    res.render("./pages/gallery", {"isLoggedIn" : isLoggedIn});
 });
 
 router.get("/team", function(req, res, next) {
-    res.render("./pages/team");
+  if(req.session.user){
+    isLoggedIn = true;
+  }
+  else isLoggedIn = false;
+    res.render("./pages/team", {"isLoggedIn" : isLoggedIn});
 });
 
 router.get("/ca", function(req, res, next) {
-    res.render("./pages/ca");
+  if(req.session.user){
+    isLoggedIn = true;
+  }
+  else isLoggedIn = false;
+
+    res.render("./pages/ca",{"isLoggedIn" : isLoggedIn});
 });
 
 router.get("/sponsors", function(req, res, next) {
-    res.render("./pages/sponsors");
+  if(req.session.user){
+    isLoggedIn = true;
+  }
+  else isLoggedIn = false;
+    res.render("./pages/sponsors",{"isLoggedIn" : isLoggedIn});
 });
 
 module.exports = router;

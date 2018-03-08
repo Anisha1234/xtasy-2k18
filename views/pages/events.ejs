@@ -54,7 +54,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
+                  <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"><img src="../images/logonav.png"></a>
             </div>
@@ -68,7 +68,12 @@
                     <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  <% if(isLoggedIn) { %>
+                    <li class="nav-text"><a id="logout" style="cursor:pointer;">LogOut</a></li>
+                  <% } %>
+                  <% if(!isLoggedIn) {%>
                     <li class="nav-text"><a href="/login">Login / Register</a></li>
+                  <% } %>
                 </ul>
             </div>
         </div>
@@ -266,13 +271,24 @@
                         </div>
                         <div class="modal-body" style="padding:20px 30px;">
                             <h3><u>ABOUT</u></h3>
-                            <p>A competitive coding challenge in which all the teams will code to solve the given problems in given time.</p>
+                            <p>CodeBusters is the flagship coding event of Xtasy. It is a programming contest where participants will have to solve coding problems in the given amount of time. </p>
+                            <p>There will be 2 rounds.</p>
+                            <p>Prelims will be held on 12th March and it will be an online contest hosted in hackerrank. </p>
+                            <p>Teams selected from the prelims will have to attend the final round which will be an offline 3-4 hour contest during the Xtasy.</p>
+                            <br>
+                            <p>Team Size - 1 or 2 members per team</p>
                             <h3><u>Expected Duration of the Event</u></h3>
-                            <p>​4 hours</p>
+                            <p>​3-4 hours</p><br>
+                            <h3><u>Rules</u></h3>
+                            <p>1) You will need your Xtasy ID to participate in the event. So make sure you register for Xtasy using the online portal.</p>
+                            <p>2) Use only the hackerrank account of the team leader to submit solutions during the prelims.</p>
+                            <p>3) Do not share your solutions. If plagiarism is found, you and your team will be immediately disqualified. </p>
+                            <p>4) Sign up for the contest in hackerrank using this link:<a href="https://www.hackerrank.com/codebuster-prelims" style="color:red;">https://www.hackerrank.com/codebuster-prelims</a></p>
+                            <p>5) For any further query, you can contact cet.sac.zairza@gmail.com</p>
                             <h3><u>CONTACT</u></h3>
-                            <p>Amitosh Swain Mahapatra</p>
-                            <p>Anisha Swain</p>
-                            <button type="button" class="btn btn-success"><a href="https://docs.google.com/forms/d/1iF-cCXFuXKHUNk0QZeZDO_JG8Oak5u5W_JT2hmWSVZw/edit?usp=sharing_eil&ts=5a91342a" target="_blank">REGISTER</a></button>
+                            <p>Rishav Aggarwal - 8328897935</p>
+                            <p>Ruturaj Mohanty - 9658763292</p>
+                            <a href= "https://goo.gl/forms/q8ae5pBV0BWZjbxj2"><button type="button" class="btn btn-success">REGISTER</button></a>
                         </div>
                     </div>
                 </div>
@@ -2211,7 +2227,7 @@
         <a href="../brochure/Brochure.pdf" class="brochure"><i class="fa fa-book fa-1x"></i></a>
     </div>
 
-    <!-- 
+    <!--
 		Essential Scripts
 		=====================================-->
 
@@ -2237,6 +2253,7 @@
     <!--Background Animation-->
     <script src='plugins/particles.min.js'></script>
     <script src="javascripts/particle.js"></script>
+    <script src="./javascripts/logout.js"></script>
 
 </body>
 

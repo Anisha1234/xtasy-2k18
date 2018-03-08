@@ -49,7 +49,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
+                  <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"><img src="../images/logonav.png"></a>
             </div>
@@ -64,14 +64,19 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  <% if(isLoggedIn) { %>
+                    <li class="nav-text"><a id="logout" style="cursor:pointer;">LogOut</a></li>
+                  <% } %>
+                  <% if(!isLoggedIn) {%>
                     <li class="nav-text"><a href="/login">Login / Register</a></li>
+                  <% } %>
                 </ul>
             </div>
         </div>
     </nav>
 
 
-   
+
         <div>
             <br>
             <br>
@@ -89,7 +94,7 @@
             <button type="button" data-filter="all" id="element">All</button>
             <button type="button" data-filter=".std" id="element">Student Forum</button>
             <button type="button" data-filter=".web" id="element">Designers</button>
-            
+
         </div>
 
 
@@ -104,11 +109,11 @@
                         <img class="img-responsive" src="images/team/adityabhai.jpg" alt="Meghna" id="dimen">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Aditya Padhi</b></h4>
@@ -128,11 +133,11 @@
                         <img class="img-responsive" src="images/team/sagar.jpg" alt="Meghna" id="dimen">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Sagar Samal</b></h4>
@@ -152,11 +157,11 @@
                         <img class="img-responsive" src="images/team/divyenbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Divyen Deep</b></h4>
@@ -175,11 +180,11 @@
                         <img class="img-responsive" src="images/team/siva bhai.jpg" alt="Meghna" id="dimen">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 18px;"><b>Sivananda Pradhan</b></h4>
@@ -198,11 +203,11 @@
                         <img class="img-responsive" src="images/team/ashutoshbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Ashutosh Hota</b></h4>
@@ -221,11 +226,11 @@
                         <img class="img-responsive" src="images/team/sanjaybhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>K.Sanjay Reddy</b></h4>
@@ -244,11 +249,11 @@
                         <img class="img-responsive" src="images/team/ankitbhai.jpg" alt="Meghna" id="dimen">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Ankit Agarwal</b></h4>
@@ -267,11 +272,11 @@
                         <img class="img-responsive" src="images/team/nirmal bhai.jpg" alt="Meghna" id="dimen">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Nirmal Behera</b></h4>
@@ -283,8 +288,8 @@
 
                 </div>
             </div>
-            
-             
+
+
              <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown std container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -292,11 +297,11 @@
                         <img class="img-responsive" src="images/team/pramanikbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 18px;"><b>Debabrata Pramanik</b></h4>
@@ -315,11 +320,11 @@
                         <img class="img-responsive" src="images/team/shrikadi.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Shrika Agarwal</h4></b>
@@ -338,11 +343,11 @@
                         <img class="img-responsive" src="images/team/arpitbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Arpit  Bhal</b></h4>
@@ -361,11 +366,11 @@
                         <img class="img-responsive" src="images/team/milanbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Millan Sahoo</b> </h4>
@@ -384,11 +389,11 @@
                         <img class="img-responsive" src="images/team/ashirwadbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Ashirwad Pattnaik</b></h4>
@@ -407,11 +412,11 @@
                         <img class="img-responsive" src="images/team/shikhadi.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 18px;"><b>Shikha Mahapatra</b></h4>
@@ -430,11 +435,11 @@
                         <img class="img-responsive" src="images/team/sohanbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Sohan Sahoo</b></h4>
@@ -453,11 +458,11 @@
                         <img class="img-responsive" src="images/team/pratitbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Pratit Das</b></h4>
@@ -476,11 +481,11 @@
                         <img class="img-responsive" src="images/team/avishekdas.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Avishek Das</b></h4>
@@ -499,11 +504,11 @@
                         <img class="img-responsive" src="images/team/shreyasdash.jpeg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Shreyas Dash</b></h4>
@@ -522,11 +527,11 @@
                         <img class="img-responsive" src="images/team/rishi.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Rishav Agarwal</b></h4>
@@ -546,11 +551,11 @@
                         <img class="img-responsive" src="images/team/saibhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 16px;"><b>Saisankar Gochhayat</b></h4>
@@ -570,11 +575,11 @@
                         <img class="img-responsive" src="images/team/anishadi.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Anisha Swain</b></h4>
@@ -594,11 +599,11 @@
                         <img class="img-responsive" src="images/team/montybhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 18px;"><b>Abhishek Mohanty</b></h4>
@@ -618,11 +623,11 @@
                         <img class="img-responsive" src="images/team/sinchanbhai.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Sinchan Mishra</b></h4>
@@ -634,7 +639,7 @@
 
                 </div>
             </div>
-            
+
              <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -642,11 +647,11 @@
                         <img class="img-responsive" src="images/team/manusi.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Manaswini Das</b></h4>
@@ -666,11 +671,11 @@
                         <img class="img-responsive" src="images/team/ramakrishna.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                      </div>   <!-- member social profile -->
-                        
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 18px;"><b>Ramakrishna Pattnaik</b></h4>
@@ -693,17 +698,17 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
-                       
+
                         <!-- /member social profile -->
 
                     </div>
                     <!-- /member social profile -->
-                
+
 
                 <!-- member name & designation -->
-               
+
 
                     <!-- member name & designation -->
                     <div class="member-meta">
@@ -732,10 +737,10 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
                     </div>
-                        
+
                         <!-- /member social profile -->
 
                     <!-- member name & designation -->
@@ -768,7 +773,7 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
                     </div>
 
@@ -784,7 +789,7 @@
             </div>
 
         </div>
-      
+
             <div class="mixi mix  col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -794,9 +799,9 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
-                       
+
                         <!-- member social profile -->
 
                     <!-- member social profile -->
@@ -829,9 +834,9 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
-                        
+
                         <!-- member social profile -->
 
                     <!-- member social profile -->
@@ -865,9 +870,9 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
-                        
+
                         <!-- member social profile -->
 
                     <!-- member social profile -->
@@ -889,7 +894,7 @@
             </div>
 
         </div>
-        
+
             <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -897,11 +902,11 @@
                         <img class="img-responsive" src="images/team/shashwat.jpg" alt="Meghna">
                         <!-- /member photo -->
                         <div class="mask">
-                            
+
                         </div>
 
                         <!-- member social profile -->
-                      </div> 
+                      </div>
 
                     <!-- member name & designation -->
                     <div class="member-meta">
@@ -918,7 +923,7 @@
             </div>
 
         </div>
-        
+
             <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -928,7 +933,7 @@
 
                         <!-- member social profile -->
                        <div class="mask">
-                            
+
                         </div>
                         <!-- member social profile -->
 
@@ -951,7 +956,7 @@
             </div>
 
         </div>
-       
+
              <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -961,12 +966,12 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
-                      
+
                         <!-- member social profile -->
 
-                    
+
                     <!-- member social profile -->
                 </div>
 
@@ -986,7 +991,7 @@
             </div>
 
         </div>
-        
+
              <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -996,15 +1001,15 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
-                       
+
                         <!-- member social profile -->
 
                     </div>
                     <!-- member social profile -->
-              
-               
+
+
                     <!-- member name & designation -->
                     <div class="member-meta">
                         <h4 style="font-size: 20px;"><b>Pooja Agarwal</b></h4>
@@ -1018,7 +1023,7 @@
             </div>
 
         </div>
-       
+
              <div class="mixi mix col-md-2 col-xs-4 col-sm-4 fadeInDown web container team-box" data-wow-duration="500ms">
                 <div class="team-member">
                     <div class="member-photo">
@@ -1028,7 +1033,7 @@
 
                         <!-- member social profile -->
                         <div class="mask">
-                            
+
                         </div>
                         <!-- member social profile -->
 
@@ -1058,7 +1063,7 @@
 
 
 
-    <!-- 
+    <!--
             Essential Scripts
             =====================================-->
 
@@ -1088,6 +1093,7 @@
     <!--Background Animation-->
     <script src='plugins/particles.min.js'></script>
     <script src="javascripts/particle.js"></script>
+    <script src="./javascripts/logout.js"></script>
 </body>
 
 </html>

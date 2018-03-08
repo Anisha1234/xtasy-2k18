@@ -47,7 +47,7 @@
             text-align: center;
             z-index: 999;
         }
-        
+
         .loader {
             position: relative;
             top: 50%;
@@ -55,21 +55,21 @@
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
         }
-        
+
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
         }
-        
+
         .modal-dialog {
             width: 65%;
             margin: auto;
         }
-        
+
         .modal-body {
             height: 300px;
         }
-        
+
         html,
         body {
             height: 100%;
@@ -108,7 +108,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
+                  <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"><img src="../images/logonav.png"></a>
             </div>
@@ -122,7 +122,12 @@
                     <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  <% if(isLoggedIn) { %>
+                    <li class="nav-text"><a id="logout" style="cursor:pointer;">LogOut</a></li>
+                  <% } %>
+                  <% if(!isLoggedIn) {%>
                     <li class="nav-text"><a href="/login">Login / Register</a></li>
+                  <% } %>
                 </ul>
             </div>
         </div>
@@ -181,6 +186,44 @@ Welcome Slider
                     <div class="border"></div>
                 </div>
                 <!-- /section title -->
+                <div class="col-md-2"></div>
+
+                <!-- 2nd star event -->
+                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+                    <a id="myBtn2" style="cursor:pointer;">
+                        <div class="block">
+                            <div>
+                                <img src="images/backgrounds/sapan-resize.jpg" class="image" style="border-radius:15px;">
+                            </div>
+                            <!-- Express About Yourself -->
+                            <!--<div class="content text-center">
+                                <h3 class="ddd">-->
+                            <!--We're Creative-->
+                            </h3>
+                            <p style="font-size:20px; padding:5%;margin-bottom:-2px;">Sapan Verma</p>
+                            <p style="font-size:15px;">15th March</p>
+
+
+                        </div>
+                </div>
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header" style="padding:35px 50px;">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4><b>SAPAN VERMA</b></h4>
+                            </div>
+                            <div class="modal-body" style="padding:40px 50px;">
+                                <p>It's time to witness the co-founder of EAST INDIA COMEDY. <b>SAPAN VERMA</b>, the "hot favorite of the audience" will be starring on the Comedy Night i.e 15th March<br><br> #I'm not an extrovert who loves the attention
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-1"></div>
                 <!-- 1st star event -->
                 <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
@@ -195,6 +238,8 @@ Welcome Slider
                                     <!--We're Creative-->
                                 </h3>
                                 <p style="font-size:20px">Anushka Manchanda</p>
+                                <p style="font-size:15px">17th March</p>
+
                             </div>
                         </div>
                     </a>
@@ -217,41 +262,7 @@ Welcome Slider
                 <!--<div class="col-md-4"></div>-->
                 <!-- End 1st star night -->
 
-                <div class="col-md-2"></div>
 
-                <!-- 2nd star event -->
-                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
-                    <a id="myBtn2" style="cursor:pointer;">
-                        <div class="block">
-                            <div>
-                                <img src="images/backgrounds/sapan-resize.jpg" class="image" style="border-radius:15px;">
-                            </div>
-                            <!-- Express About Yourself -->
-                            <!--<div class="content text-center">
-                                <h3 class="ddd">-->
-                            <!--We're Creative-->
-                            </h3>
-                            <p style="font-size:20px; padding:5%;margin-bottom:-2px;">Sapan Verma</p>
-                        </div>
-                </div>
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="myModal2" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header" style="padding:35px 50px;">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4><b>SAPAN VERMA</b></h4>
-                            </div>
-                            <div class="modal-body" style="padding:40px 50px;">
-                                <p>It's time to witness the co-founder of EAST INDIA COMEDY. <b>SAPAN VERMA</b>, the "hot favorite of the audience" will be starring on the Comedy Night i.e 15th March<br><br> #I'm not an extrovert who loves the attention
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- End 2nd star night -->
 
@@ -556,6 +567,7 @@ Welcome Slider
     <script type="text/javascript" src="javascripts/events.js"></script>
 
     <script type="text/javascript" src="javascripts/index.js"></script>
+    <script src="./javascripts/logout.js"></script>
 
 </body>
 
