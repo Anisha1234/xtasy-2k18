@@ -19,6 +19,8 @@ var change = require("../controllers/changepassword");
 
 var getUsers = require("../controllers/getallusers");
 
+var central = require("../controllers/centralreg");
+
 
 router.get("/" , function(req,res){
     res.json({"msg" : "hello world"})
@@ -45,6 +47,12 @@ router.get("/getallusers" , function(req,res){
 });
 
 router.get("/getallusers/:key", getUsers.getAllUsers)
+
+router.get("/centralregd" , function(req,res){
+    res.send("Id missing");
+});
+
+router.get("/centralregd/:id" , central.centralRegd);
 
 
 module.exports = router;
