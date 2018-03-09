@@ -35,12 +35,12 @@
     <!--
 	    Start Preloader
 	    ==================================== -->
-    <div id="preloader">
+    <!--<div id="preloader">
         <div class="preloader">
             <img src="images/preloader.gif">
             <div class="pace"></div>
         </div>
-    </div>
+    </div>-->
     <!--
             End Preloader
             ==================================== -->
@@ -68,12 +68,12 @@
                     <li class="nav-text"><a href="/profile">Profile</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <% if(isLoggedIn) { %>
-                    <li class="nav-text"><a id="logout" style="cursor:pointer;">LogOut</a></li>
-                  <% } %>
-                  <% if(!isLoggedIn) {%>
-                    <li class="nav-text"><a href="/login">Login / Register</a></li>
-                  <% } %>
+                    <% if(isLoggedIn) { %>
+                        <li class="nav-text"><a id="logout" style="cursor:pointer;">LogOut</a></li>
+                        <% } %>
+                            <% if(!isLoggedIn) {%>
+                                <li class="nav-text"><a href="/login">Login / Register</a></li>
+                                <% } %>
                 </ul>
             </div>
         </div>
@@ -185,8 +185,6 @@
                             <p>Prizes worth Rs 15000 to be won. (Separate prizes for Software and Hardware applications)</p>
                             <h3><u>Registration Fee:</u></h3>
                             <p>Free For Everyone.</p>
-                            <h3><u>Intrested Students Register Here:</u></h3>
-
                             <h3><u>Date</u></h3>
                             <p>11th March (Sunday)</p>
                             <h3><u>Time</u></h3>
@@ -274,8 +272,8 @@
                             <p>1st Prize -> Cash award of 6000 INR</p>
                             <p>2nd Prize -> Cash award of 4000 INR</p>
                             <h3><u>ABOUT</u></h3>
-                            <p>Codebusters is one of the flagship events of XTASY 2018. It is a programming contest where you get an opportunity to show off your coding skills by solving programming problems in the given time.
-                            The competition will be conducted in 2 rounds: prelims and finals.</p>
+                            <p>Codebusters is one of the flagship events of XTASY 2018. It is a programming contest where you get an opportunity to show off your coding skills by solving programming problems in the given time. The competition will be conducted
+                                in 2 rounds: prelims and finals.</p>
                             <p>There will be 2 rounds.</p>
                             <p>Prelims will be held on 12th March and it will be an online contest hosted in hackerrank. </p>
                             <p>Teams selected from the prelims will have to attend the final round which will be an offline 3-4 hour contest during the Xtasy.</p>
@@ -299,7 +297,7 @@
                             <h3><u>CONTACT</u></h3>
                             <p>Rishav Aggarwal - 8328897935</p>
                             <p>Ruturaj Mohanty - 9658763292</p>
-                            <a href= "https://goo.gl/forms/q8ae5pBV0BWZjbxj2"><button type="button" class="btn btn-success">REGISTER</button></a>
+                            <a href="https://goo.gl/forms/q8ae5pBV0BWZjbxj2"><button type="button" class="btn btn-success">REGISTER</button></a>
                         </div>
                     </div>
                 </div>
@@ -559,7 +557,7 @@
                             <h3><u>CONTACT</u></h3>
                             <p>Ashutosh Sahoo-8895575106</p>
                             <p>Manisha Samal-8763212886</p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -957,7 +955,9 @@
                         </div>
                         <div class="modal-body" style="padding:20px 30px;">
                             <h3><u>What will happen in the competition ?</u></h3>
-                            <p>All teams will get the maze design with specifications from this portal, which will be uploaded soon . All teams will be provided with a “START” and ”STOP” point on the given maze.All the teams are allowed to start their robot before the START point .When the back wheels of the robot will cross the “START” point then the stop watch will be started and the stopwatch will be stopped when the forward wheel of the robot reaches the “STOP” point. In addition to that all the teams have two “RUN” chances.That means they are allowed to run their robots for 2 times and the best “run_time” will be taken into consideration.</p>
+                            <p>All teams will get the maze design with specifications from this portal, which will be uploaded soon . All teams will be provided with a “START” and ”STOP” point on the given maze.All the teams are allowed to start their robot
+                                before the START point .When the back wheels of the robot will cross the “START” point then the stop watch will be started and the stopwatch will be stopped when the forward wheel of the robot reaches the “STOP” point.
+                                In addition to that all the teams have two “RUN” chances.That means they are allowed to run their robots for 2 times and the best “run_time” will be taken into consideration.</p>
                             <h3><u>General Rules</u></h3>
                             <p>1.Team size : A team consists of maximum 4 members. Students from different institutes can form a team.</p>
                             <p>2.Event Entry : Students with valid identity card from their respective institute and XTASY ID only can be allowed to participate in this competition.</p>
@@ -966,13 +966,11 @@
                             <p>5.Replacement of Parts : Once the robot is started ,replacement of robotic parts, sensors and battery are not allowed. While modification of code is allowed but with a penalty added to it.</p>
                             <p>6.Damage to arena : Any damage caused by the bot to the maze can lead to disqualification.</p>
                             <h3><u>Event Rules</u></h3>
-                            <p>1.Size and Weight : The robot should have a  maximum weight of 3kg and size of the robot doesn’t matter.</p>
-                            <p>2.Time Requirement :  There is no time limit to complete the traversal of path.The time taken by the robot from the “START”point to ”STOP” point will be considered.</p>
+                            <p>1.Size and Weight : The robot should have a maximum weight of 3kg and size of the robot doesn’t matter.</p>
+                            <p>2.Time Requirement : There is no time limit to complete the traversal of path.The time taken by the robot from the “START”point to ”STOP” point will be considered.</p>
                             <p>3. Deviation of path : Failing to follow the path for 2 second will lead to lose one RUN chance and the second RUN chance is the final.</p>
-                            <p>4.Maze specifications :<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;1.The complete maze is with black lines in white background.The thickness of the black line will be given on one day before the competition through .<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;2.The black line width is 3 cm and the flex size is 7x7 ft.<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;3.The maze may contain some curves,T-joints and line crossing or loops.<br></p>
+                            <p>4.Maze specifications :<br> &nbsp;&nbsp;&nbsp;&nbsp;1.The complete maze is with black lines in white background.The thickness of the black line will be given on one day before the competition through .<br> &nbsp;&nbsp;&nbsp;&nbsp;2.The
+                                black line width is 3 cm and the flex size is 7x7 ft.<br> &nbsp;&nbsp;&nbsp;&nbsp;3.The maze may contain some curves,T-joints and line crossing or loops.<br></p>
 
                             <h3><u>CONTACT</u></h3>
                             <p>Keshab Kishor Swain: 8599888257</p>
