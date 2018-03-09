@@ -57,5 +57,6 @@ $(document).ready(function() {
     $("#myBtn57").click(function() { $("#myModal57").modal(); });
     $("#myBtn58").click(function() { $("#myModal58").modal(); });
     $("#myBtn59").click(function() { $("#myModal59").modal(); });
+    $("#myBtn60").click(function() { $("#myModal60").modal(); });
 
 });
